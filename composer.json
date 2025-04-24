@@ -1,0 +1,40 @@
+{
+    "name": "slavlee/food-recipes",
+    "type": "typo3-cms-extension",
+    "description": "TYPO3 Extension to create a food recipe database. Perfect for food blogs.",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-backend": "^13.4",
+		"typo3/cms-frontend": "^13.4",
+		"typo3/cms-fluid-styled-content": "^13.4",
+        "typo3/cms-core": "^13.4"
+    },
+    "require-dev": {
+        "typo3/coding-standards": "^0.8"
+    },
+    "authors": [
+        {
+            "name": "Kevin Chileong Lee",
+            "role": "Developer",
+            "email": "info@slavlee.de",
+            "homepage": "https://slavlee.de/"
+        }
+    ],
+    "keywords": [
+        "typo3",
+        "misc"
+    ],
+    "support": {
+        "issues": "https://github.com/slavlee/food_recipes/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slavlee\\FoodRecipes\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "food_recipes"
+        }
+    }
+}
