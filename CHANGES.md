@@ -1,3 +1,6 @@
+## Version dev-1.0.0-1
+- [FEATURE] Register and configure new News record type: Recipe
+
 ## Version dev-1.0.0-0
 - [IMPORTANT] Intitial commmit
 - [FEATURE] Add composer.json

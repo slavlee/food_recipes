@@ -1,0 +1,6 @@
+name: slavlee/food-recipes
+label: Food Recipes
+hidden: false
+dependencies:
+  - typo3/fluid-styled-content
+  - georgringer/news
