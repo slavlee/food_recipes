@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2025-05-01T20:09:27Z" product-name="food_recipes">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2025-05-01T20:09:27Z" product-name="food_recipes">
 		<header/>
 		<body>
 			<trans-unit id="layout.foodCategories">
-				<source>Food categories</source>
+				<target>Essen Kategorien</target>
 			</trans-unit>
 			<trans-unit id="recordtype.recipe">
-				<source>Recipe</source>
+				<target>Rezept</target>
 			</trans-unit>
 		</body>
 	</file>
