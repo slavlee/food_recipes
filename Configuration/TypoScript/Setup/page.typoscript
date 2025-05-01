@@ -1,0 +1,5 @@
+page {
+  includeCSSLibs {
+    foodrecipes-image-hover-effects = EXT:food_recipes/Resources/Public/Css/image-hover-effects.css
+  }
+}

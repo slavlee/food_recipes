@@ -1,0 +1,10 @@
+plugin.tx_news {
+  view {
+    templateRootPaths {
+      5 = EXT:food_recipes/Resources/Private/Extensions/News/Templates/
+    }
+    partialRootPaths {
+      5 = EXT:food_recipes/Resources/Private/Extensions/News/Partials/
+    }
+  }
+}
