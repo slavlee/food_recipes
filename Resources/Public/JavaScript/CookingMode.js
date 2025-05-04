@@ -8,7 +8,12 @@ const cookingMode = {
 
     this.toggler.addEventListener('click', (event) => {
       event.preventDefault();
-      this.start();
+
+      if (!document.querySelector('body').classList.contains('cooking-mode')) {
+        this.start();
+      } else {
+        this.end();
+      }
     });
 
     this.steps = document.querySelector('.list-recipe-steps');
@@ -55,6 +60,9 @@ const cookingMode = {
   start: function() {
     this.steps.querySelector('.list-group-item:first-child').classList.add('active');
     document.querySelector('body').classList.add('cooking-mode');
+  },
+  end: function() {
+    document.querySelector('body').classList.remove('cooking-mode');
   },
   goToStep: function(targetIndex) {
     this.steps.querySelectorAll('.list-group-item.active').forEach((element) => {

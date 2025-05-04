@@ -26,7 +26,7 @@
 				<source>Servings</source>
 			</trans-unit>
 			<trans-unit id="recipe.details.cookingModeToggler">
-				<source>Start cooking mode</source>
+				<source>Toggle cooking mode</source>
 			</trans-unit>
 		</body>
 	</file>

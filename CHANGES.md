@@ -1,6 +1,11 @@
 ## Version dev-1.0.0-3
 - [WIP] Page Template and Styling
 - [WIP] News Detail final Template and Styling
+- [FEATURE] Add function to end cooking mode
+
+## Version dev-1.0.0-3
+- [WIP] Page Template and Styling
+- [WIP] News Detail final Template and Styling
 - [FEATURE] Cooking Mode
 
 ## Version dev-1.0.0-3
