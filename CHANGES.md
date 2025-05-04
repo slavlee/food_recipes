@@ -1,4 +1,9 @@
 ## Version dev-1.0.0-3
+- [WIP] Page Template and Styling
+- [WIP] News Detail final Template and Styling
+- [FEATURE] Cooking Mode
+
+## Version dev-1.0.0-3
 - [WIP] Page Template
 - [WIP] News Detail final Template and Cooking mode
 - [FEATURE] Add new News template: foodListAndDetail
