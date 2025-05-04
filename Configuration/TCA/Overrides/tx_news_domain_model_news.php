@@ -1,7 +1,9 @@
 <?php
 defined('TYPO3') or die();
 
-/* NEWS - START */
-$newsBootstrap = new \Slavlee\FoodRecipes\Bootstrap\NewsBootstrap();
-$newsBootstrap->invoke();
-/* NEWS - END */
+call_user_func(function () {
+    /* NEWS - START */
+    $newsBootstrap = new \Slavlee\FoodRecipes\Bootstrap\TCA\NewsBootstrap();
+    $newsBootstrap->invoke();
+    /* NEWS - END */
+});

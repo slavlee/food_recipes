@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2025-05-04T20:09:27Z" product-name="food_recipes">
+		<header/>
+		<body>
+			<trans-unit id="palette.recipe">
+				<source>Recipe</source>
+			</trans-unit>
+			<trans-unit id="palette.recipe_steps">
+				<source>Steps</source>
+			</trans-unit>
+
+			<trans-unit id="misc.time_in_minutes">
+				<source>Time in minutes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

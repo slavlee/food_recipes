@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2025-05-04T20:09:27Z" product-name="food_recipes">
+		<header/>
+		<body>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.recipe">
+				<source>Recipe</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.servings">
+				<source>Servings</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.prep_time">
+				<source>Preperation time</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.cook_time">
+				<source>Cooking time</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.ingredients">
+				<source>Ingredients</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps">
+				<source>Steps</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps.description">
+				<source>IMPORTANT: Please add all ingredients first and save this record. Otherwise you cannot apply the ingredients to the following steps.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient">
+				<source>Ingredient</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit">
+				<source>Unit</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.grams">
+				<source>Grams</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.cups">
+				<source>Cups</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.tablespoons">
+				<source>Tablespoons</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.teaspons">
+				<source>Teaspons</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.pieces">
+				<source>Pieces</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.milliliter">
+				<source>Milliliter</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.is_main">
+				<source>is main ingredient</source>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_step.number">
+				<source>Number</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
+				<source>Used ingredients</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

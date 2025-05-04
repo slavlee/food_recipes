@@ -61,7 +61,10 @@
                     <figure class="effect effect-steve effect-notitle">
                         <f:image image="{category.item.images.0}" width="500c" height="500c"/>
                         <figcaption>
-                            <p class="subline">{category.item.title}</p>
+                            <p class="title">{category.item.title}</p>
+                            <f:if condition="{category.item.description}">
+                                <p class="subline">{category.item.description}</p>
+                            </f:if>
                             <f:link.page title="{category.item.title}" pageUid="{settings.listPid}"
                                 additionalParams="{tx_news_pi1:{overwriteDemand:{categories: category.item.uid}}}"></f:link.page>
                         </figcaption>

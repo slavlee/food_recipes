@@ -1,4 +1,8 @@
 ## Version dev-1.0.0-2
+- [FEATURE] Add Recipe models
+- [CHANGE] News->foodCategories: Display category title as title and description as subline
+
+## Version dev-1.0.0-2
 - [FEATURE] News: New template for categories: foodCategories
 - [FEATURE] Add image hover effects stevie from https://tympanus.net/Development/HoverEffectIdeas/index2.html
 
