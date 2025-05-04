@@ -1,3 +1,10 @@
+## Version dev-1.0.0-3
+- [WIP] Page Template
+- [WIP] News Detail final Template and Cooking mode
+- [FEATURE] Add new News template: foodListAndDetail
+- [FEATURE] Create TimeInMinutesViewHelper
+- [FEATURE] Print Ingredients and Step in News Detail
+
 ## Version dev-1.0.0-2
 - [FEATURE] Add Recipe models
 - [CHANGE] News->foodCategories: Display category title as title and description as subline

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2025-05-04T20:09:27Z" product-name="food_recipes">
+		<header/>
+		<body>
+			<trans-unit id="misc.hour">
+				<source>hour</source>
+			</trans-unit>
+			<trans-unit id="misc.minute">
+				<source>minute</source>
+			</trans-unit>
+			<trans-unit id="misc.hours">
+				<source>hours</source>
+			</trans-unit>
+			<trans-unit id="misc.minutes">
+				<source>minutes</source>
+			</trans-unit>
+
+			<trans-unit id="recipe.details.prep_time">
+				<source>Preperation</source>
+			</trans-unit>
+			<trans-unit id="recipe.details.cook_time">
+				<source>Cooking</source>
+			</trans-unit>
+			<trans-unit id="recipe.details.servings">
+				<source>Servings</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

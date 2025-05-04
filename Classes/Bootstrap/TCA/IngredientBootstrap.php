@@ -99,7 +99,7 @@ class IngredientBootstrap extends AbstractBootstrap
                                     'value' => RecipeRegister::UNIT_TABLESPOONS
                                 ],
                                 [
-                                    'label' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.teaspons'),
+                                    'label' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.teaspoons'),
                                     'value' => RecipeRegister::UNIT_TEASPOONS
                                 ],
                                 [

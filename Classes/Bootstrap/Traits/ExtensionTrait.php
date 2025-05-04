@@ -23,6 +23,7 @@ use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 trait ExtensionTrait
 {
     protected $extensionKey = 'food_recipes';
+    public static $extensionKeyAsStatic = 'food_recipes';
 
     /**
      * Return the extension key in Namespace writing

@@ -6,6 +6,10 @@
 			<trans-unit id="layout.foodCategories">
 				<source>Food categories</source>
 			</trans-unit>
+			<trans-unit id="layout.foodListAndDetail">
+				<source>Food List and Detail</source>
+			</trans-unit>
+
 			<trans-unit id="recordtype.recipe">
 				<source>Recipe</source>
 			</trans-unit>

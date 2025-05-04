@@ -46,7 +46,7 @@
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.tablespoons">
 				<source>Tablespoons</source>
 			</trans-unit>
-			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.teaspons">
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.teaspoons">
 				<source>Teaspons</source>
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.pieces">

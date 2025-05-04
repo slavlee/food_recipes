@@ -20,6 +20,24 @@ class Ingredient extends AbstractEntity
      */
     protected string $name = '';
 
+    /**
+     * Summary of unit
+     * @var string
+     */
+    protected string $unit = '';
+
+    /**
+     * Summary of quantity
+     * @var float
+     */
+    protected float $quantity = 0;
+
+    /**
+     * Summary of isMain
+     * @var bool
+     */
+    protected bool $isMain = false;
+
 	/**
 	 * Get the value of name
 	 *
@@ -40,6 +58,78 @@ class Ingredient extends AbstractEntity
 	public function setName(string $name): self
 	{
 		$this->name = $name;
+
+		return $this;
+	}
+
+	/**
+	 * Get summary of unit
+	 *
+	 * @return string
+	 */
+	public function getUnit(): string
+	{
+		return $this->unit;
+	}
+
+	/**
+	 * Set summary of unit
+	 *
+	 * @param string  $unit
+	 *
+	 * @return self
+	 */
+	public function setUnit(string $unit): self
+	{
+		$this->unit = $unit;
+
+		return $this;
+	}
+
+	/**
+	 * Get summary of quantity
+	 *
+	 * @return float
+	 */
+	public function getQuantity(): float
+	{
+		return $this->quantity;
+	}
+
+	/**
+	 * Set summary of quantity
+	 *
+	 * @param float  $quantity
+	 *
+	 * @return self
+	 */
+	public function setQuantity(float $quantity): self
+	{
+		$this->quantity = $quantity;
+
+		return $this;
+	}
+
+	/**
+	 * Get summary of isMain
+	 *
+	 * @return bool
+	 */
+	public function getIsMain(): bool
+	{
+		return $this->isMain;
+	}
+
+	/**
+	 * Set summary of isMain
+	 *
+	 * @param bool  $isMain
+	 *
+	 * @return self
+	 */
+	public function setIsMain(bool $isMain): self
+	{
+		$this->isMain = $isMain;
 
 		return $this;
 	}
