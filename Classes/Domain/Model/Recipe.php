@@ -45,10 +45,17 @@ class Recipe extends News
      */
     protected ObjectStorage $steps;
 
+    /**
+     * Summary of affiliates
+     * @var ObjectStorage<Affiliate>
+     */
+    protected ObjectStorage $affiliates;
+
     public function __construct()
     {
         $this->ingredients = new ObjectStorage();
         $this->steps = new ObjectStorage();
+        $this->affiliates = new ObjectStorage();
     }
 
 	/**
@@ -167,6 +174,30 @@ class Recipe extends News
 	public function setSteps(ObjectStorage $steps): self
 	{
 		$this->steps = $steps;
+
+		return $this;
+	}
+
+	/**
+	 * Get summary of affiliates
+	 *
+	 * @return ObjectStorage<Affiliate>
+	 */
+	public function getAffiliates(): ObjectStorage
+	{
+		return $this->affiliates;
+	}
+
+	/**
+	 * Set summary of affiliates
+	 *
+	 * @param ObjectStorage<Affiliate>  $affiliates
+	 *
+	 * @return self
+	 */
+	public function setAffiliates(ObjectStorage $affiliates): self
+	{
+		$this->affiliates = $affiliates;
 
 		return $this;
 	}

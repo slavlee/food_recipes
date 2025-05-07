@@ -58,7 +58,7 @@ class NewsBootstrap extends AbstractBootstrap
 
         // Inherit config from News Default
         $GLOBALS['TCA'][$this->dbTable]['types'][ContentRegister::NEWSTYPE_RECIPE]['showitem'] =
-            '--palette--;;paletteCore,title,--palette--;;paletteSlug,teaser, --palette--;;paletteDate, bodytext, --div--;LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.recipe, --palette--;;recipe,--palette--;;recipe_steps, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media, fal_media,fal_related_files, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories, categories, --div--;LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.tabs.relations, related,related_from, related_links,tags, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata, --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;paletteAuthor, --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.metatags;metatags, --palette--;LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.palettes.alternativeTitles;alternativeTitles, --palette--;;sitemap, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;paletteLanguage, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;paletteHidden, --palette--;;paletteAccess, --div--;LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:notes, notes, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.extended';
+            '--palette--;;paletteCore,title,--palette--;;paletteSlug,teaser, --palette--;;paletteDate, bodytext, --div--;LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.recipe, --palette--;;recipe,--palette--;;recipe_steps,affiliates, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.media, fal_media,fal_related_files, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories, categories, --div--;LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.tabs.relations, related,related_from, related_links,tags, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.metadata, --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.editorial;paletteAuthor, --palette--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.palettes.metatags;metatags, --palette--;LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:tx_news_domain_model_news.palettes.alternativeTitles;alternativeTitles, --palette--;;sitemap, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, --palette--;;paletteLanguage, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, --palette--;;paletteHidden, --palette--;;paletteAccess, --div--;LLL:EXT:news/Resources/Private/Language/locallang_db.xlf:notes, notes, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_tca.xlf:pages.tabs.extended';
     }
 
     private function addProperties(): void
@@ -124,6 +124,19 @@ class NewsBootstrap extends AbstractBootstrap
                         'minitems' => 0,
                         'maxitems' => 99
                     ]
+                ]
+            ),
+            'affiliates' => $this->getInlineTCADef(
+                $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.affiliates'),
+                'tx_foodrecipes_domain_model_affiliate',
+                'recipe',
+                $this->dbTable,
+                true,
+                [
+                    'config' => [
+                        'minitems' => 0,
+                        'maxitems' => 99,
+                    ],
                 ]
             )
         ];

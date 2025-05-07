@@ -1,0 +1,15 @@
+<f:if condition="{affiliate.linkLabel}">
+    <f:then>
+        <p class="h3">{affiliate.name}</p>
+        <f:if condition="{affiliate.description}">
+            <f:format.html>{affiliate.description}</f:format.html>
+        </f:if>
+        <f:link.typolink parameter="{affiliate.link}">{affiliate.linkLabel}</f:link.typolink>
+    </f:then>
+    <f:else>
+        <f:link.typolink parameter="{affiliate.link}">{affiliate.name}</f:link.typolink>
+        <f:if condition="{affiliate.description}">
+            <f:format.html>{affiliate.description}</f:format.html>
+        </f:if>
+    </f:else>
+</f:if>

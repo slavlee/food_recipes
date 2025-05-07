@@ -24,6 +24,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps.description">
 				<source>IMPORTANT: Please add all ingredients first and save this record. Otherwise you cannot apply the ingredients to the following steps.</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.affiliates">
+				<source>Affiliate links relevant to this recipe</source>
+			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient">
 				<source>Ingredient</source>
@@ -67,6 +70,22 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
 				<source>Used ingredients</source>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate">
+				<source>Affiliate</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.link_label">
+				<source>Link label</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.link">
+				<source>Link</source>
 			</trans-unit>
 		</body>
 	</file>

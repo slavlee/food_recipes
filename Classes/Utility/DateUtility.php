@@ -56,4 +56,25 @@ class DateUtility
 
         return $output;
     }
+
+    /**
+     * Convert minutes as string to ISO 8601 format
+     * @param string $value
+     * @return string
+     */
+    public static function minutesToISO8601(int $minutes): string
+    {
+        $hours = floor($minutes / 60);
+        $remainingMinutes = $minutes % 60;
+
+        $iso8601 = 'PT';
+        if ($hours > 0) {
+            $iso8601 .= $hours . 'H';
+        }
+        if ($remainingMinutes > 0 || $hours === 0) {
+            $iso8601 .= $remainingMinutes . 'M';
+        }
+
+        return $iso8601;
+    }
 }

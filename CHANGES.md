@@ -1,3 +1,8 @@
+## Version dev-1.0.0-4
+- [WIP] Page Template and Styling
+- [WIP] News Detail final Template and Styling
+- [FEATURE] Add affiliate model and relation to recipe
+
 ## Version dev-1.0.0-3
 - [WIP] Page Template and Styling
 - [WIP] News Detail final Template and Styling

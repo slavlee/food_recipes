@@ -4,7 +4,7 @@
       xmlns:recipe="http://typo3.org/ns/Slavlee/FoodRecipes/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
-<f:layout name="Detail" />
+<f:layout name="Recipe" />
 
 <!--
 	=====================
@@ -66,33 +66,33 @@
 					</f:if>
 				</n:simplePrevNext>
 			</f:if>
-			<div class="header">
-				<h1 itemprop="headline">{newsItem.title}</h1>
-			</div>
-            <div class="recipe-details">
+			<header class="recipe-header">
+				<h1 itemprop="name" tabindex="0">{newsItem.title}</h1>
+			</header>
+            <section class="recipe-details">
                 <ul>
-                    <li><span class="recipe-label"><i class="fa-regular fa-clock"></i> <f:translate key="recipe.details.prep_time" extensionName="food_recipes" /></span> <recipe:format.timeInMinutes>{newsItem.prepTime}</recipe:format.timeInMinutes></li>
-                    <li><span class="recipe-label"><i class="fa-regular fa-clock"></i> <f:translate key="recipe.details.cook_time" extensionName="food_recipes" /></span> <recipe:format.timeInMinutes>{newsItem.cookTime}</recipe:format.timeInMinutes></li>
-                    <li><span class="recipe-label"><i class="fa-solid fa-utensils"></i> <f:translate key="recipe.details.servings" extensionName="food_recipes" /></span> {newsItem.servings}</li>
+                    <li><span class="recipe-label" itemprop="prepTime" datetime="{recipe:format.timeInISO8601(value: newsItem.prepTime)}" tabindex="0"><i class="fa-regular fa-clock"></i> <f:translate key="recipe.details.prep_time" extensionName="food_recipes" /></span> <recipe:format.timeInMinutes>{newsItem.prepTime}</recipe:format.timeInMinutes></li>
+                    <li><span class="recipe-label" itemprop="cookTime" datetime="{recipe:format.timeInISO8601(value: newsItem.cookTime)}" tabindex="0"><i class="fa-regular fa-clock"></i> <f:translate key="recipe.details.cook_time" extensionName="food_recipes" /></span> <recipe:format.timeInMinutes>{newsItem.cookTime}</recipe:format.timeInMinutes></li>
+                    <li><span class="recipe-label" itemprop="yield" tabindex="0"><i class="fa-solid fa-utensils"></i> <f:translate key="recipe.details.servings" extensionName="food_recipes" /></span> {newsItem.servings}</li>
                 </ul>
-            </div>
-            <button type="button" class="btn btn-primary" id="cookingModeToggler" href="#"><f:translate key="recipe.details.cookingModeToggler" extensionName="food_recipes" /></button>
-            <div class="recipe-ingredients">
-                <h2><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.ingredients" extensionName="food_recipes" /></h2>
+            </section>
+            <button type="button" class="btn btn-primary" id="cookingModeToggler" href="#" tabindex="-1"><f:translate key="recipe.details.cookingModeToggler" extensionName="food_recipes" /></button>
+            <section class="recipe-ingredients" itemprop="ingredients">
+                <h2 tabindex="0"><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.ingredients" extensionName="food_recipes" /></h2>
                 <ul class="list-group list-ingredients">
                     <f:for each="{newsItem.ingredients}" as="ingredient" iteration="i">
-                        <li class="list-group-item">
+                        <li class="list-group-item" tabindex="0">
                             <input class="form-check-input me-1" type="checkbox" value="" id="ingredientCheckbox{ingredient.uid}">
-                            <label class="form-check-label" for="ingredientCheckbox{ingredient.uid}">{ingredient.quantity} <f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.{ingredient.unit}" extensionName="food_recipes" /><strong> {ingredient.name}</strong></label>
+                            <label class="form-check-label" for="ingredientCheckbox{ingredient.uid}" itemprop="recipeIngredient">{ingredient.quantity} <f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.{ingredient.unit}" extensionName="food_recipes" /><strong> {ingredient.name}</strong></label>
                         </li>
                     </f:for>
                 </ul>
-            </div>
-            <div class="recipe-steps">
-                <h2 class="recipe-steps-title"><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.steps" extensionName="food_recipes" /></h2>
+            </section>
+            <section class="recipe-steps" itemprop="recipeInstructions">
+                <h2 class="recipe-steps-title" tabindex="0"><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.steps" extensionName="food_recipes" /></h2>
                 <ul class="list-group list-recipe-steps" data-max-steps="{newsItem.steps -> f:count()}">
                     <f:for each="{newsItem.steps}" as="step" iteration="iteration">
-                        <li class="list-group-item">
+                        <li class="list-group-item" tabindex="0">
                             <div class="recipe-step-number">{step.number}</div>
                             <div class="recipe-step-description">
                                 <f:format.html>{step.description}</f:format.html>
@@ -113,8 +113,20 @@
                         </li>
                     </f:for>
                 </ul>
-            </div>
-			<div class="footer">
+            </section>
+            <f:if condition="{newsItem.affiliates}">
+                <section class="recipe-affiliates">
+                    <h2 class="recipe-affiliates-title" tabindex="0"><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.affiliates" extensionName="food_recipes" /></h2>
+                    <ul class="list-group list-recipe-affiliates">
+                        <f:for each="{newsItem.affiliates}" as="affiliate">
+                            <li class="list-group-item" tabindex="0">
+                                <f:render partial="Affiliate/RecipeDetail" arguments="{affiliate: affiliate}" />
+                            </li>
+                        </f:for>
+                    </ul>
+                </section>
+            </f:if>
+			<section class="footer">
 				<p>
 					<!-- date -->
 					<span class="news-list-date">
@@ -143,7 +155,7 @@
 						</span>
 					</f:if>
 				</p>
-			</div>
+			</section>
 			<n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
 				<f:if condition="{newsItem.teaser}">
 					<!-- teaser -->

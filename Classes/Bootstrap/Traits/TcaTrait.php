@@ -153,7 +153,7 @@ trait TcaTrait
      * @param array $additionalConfig
      * @return array
      */
-    protected function getInputTCADef(bool $exclude, string $label, $size = 30, bool $required = true, array $additionalConfig = []): array
+    protected function getInputTCADef(bool $exclude, string $label, $size = 30, bool $required = false, array $additionalConfig = []): array
     {
         $default =  [
             'exclude' => $exclude ? 1 : 0,
@@ -232,7 +232,7 @@ trait TcaTrait
      * @param array $additionalConfig
      * @return array
      */
-    protected function getTextareaCADef(bool $exclude, string $label, bool $required = true, array $additionalConfig = []): array
+    protected function getTextareaCADef(bool $exclude, string $label, bool $required = false, array $additionalConfig = []): array
     {
         $default = $this->getRTETCADef($exclude, $label, $required, $additionalConfig);
         unset($default['config']['enableRichtext']);
@@ -248,7 +248,7 @@ trait TcaTrait
      * @param array $additionalConfig
      * @return array
      */
-    protected function getRTETCADef(bool $exclude, string $label, bool $required = true, array $additionalConfig = []): array
+    protected function getRTETCADef(bool $exclude, string $label, bool $required = false, array $additionalConfig = []): array
     {
         $default = [
             'exclude' => $exclude ? 1 : 0,
@@ -506,7 +506,7 @@ trait TcaTrait
      * @param array $additionalConfig
      * @return array
      */
-    public function getSelectTCADef(string $label, string $renderType = 'selectSingle', bool $exclude = false, bool $required = true, array $additionalConfig = []): array
+    public function getSelectTCADef(string $label, string $renderType = 'selectSingle', bool $exclude = false, bool $required = false, array $additionalConfig = []): array
     {
         $default = [
             'exclude' => $exclude ? 1 : 0,
