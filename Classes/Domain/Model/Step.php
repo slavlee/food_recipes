@@ -33,9 +33,15 @@ class Step extends AbstractEntity
      */
     protected ObjectStorage $ingredients;
 
+    /**
+     * @var ObjectStorage<FileReference>
+     */
+    protected ObjectStorage $media;
+
     public function __construct()
     {
         $this->ingredients = new ObjectStorage();
+        $this->media = new ObjectStorage();
     }
 
 	/**
@@ -109,4 +115,28 @@ class Step extends AbstractEntity
 
 		return $this;
 	}
+
+    /**
+     * Get the value of media
+     *
+     * @return  ObjectStorage<FileReference>
+     */
+    public function getMedia(): ObjectStorage
+    {
+        return $this->media;
+    }
+
+    /**
+     * Set the value of media
+     *
+     * @param ObjectStorage<FileReference>  $media
+     *
+     * @return self
+     */
+    public function setMedia(ObjectStorage $media): self
+    {
+        $this->media = $media;
+
+        return $this;
+    }
 }

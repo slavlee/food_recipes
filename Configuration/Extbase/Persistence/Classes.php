@@ -20,4 +20,7 @@ return [
             ],
         ]
     ],
+    \Slavlee\FoodRecipes\Domain\Model\FileReference::class => [
+        'tableName' => 'sys_file_reference',
+    ]
 ];

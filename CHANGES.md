@@ -1,3 +1,8 @@
+## Version dev-1.0.0-5
+- [WIP] Page Template and Styling
+- [WIP] News Detail final Template and Styling
+- [FEATURE] Add image to Step and Affiliate
+
 ## Version dev-1.0.0-4
 - [WIP] Page Template and Styling
 - [WIP] News Detail final Template and Styling

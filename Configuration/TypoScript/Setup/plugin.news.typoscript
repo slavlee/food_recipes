@@ -7,4 +7,15 @@ plugin.tx_news {
       5 = EXT:food_recipes/Resources/Private/Extensions/News/Partials/
     }
   }
+
+  settings {
+    detail {
+      stepImage {
+        width = {$food_recipes.detail.stepImage.width}
+      }
+      affiliateImage {
+        width = {$food_recipes.detail.affiliateImage.width}
+      }
+    }
+  }
 }

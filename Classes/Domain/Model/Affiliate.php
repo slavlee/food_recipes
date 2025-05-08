@@ -38,6 +38,11 @@ class Affiliate extends AbstractEntity
      */
     protected string $link = '';
 
+    /**
+     * @var FileReference
+     */
+    protected FileReference $image;
+
 	/**
 	 * Get summary of name
 	 *
@@ -133,4 +138,28 @@ class Affiliate extends AbstractEntity
 
 		return $this;
 	}
+
+    /**
+     * Get the value of image
+     *
+     * @return FileReference
+     */
+    public function getImage(): FileReference
+    {
+        return $this->image;
+    }
+
+    /**
+     * Set the value of image
+     *
+     * @param  FileReference  $image
+     *
+     * @return self
+     */
+    public function setImage(FileReference $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
 }

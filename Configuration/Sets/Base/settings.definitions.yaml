@@ -1,0 +1,21 @@
+categories:
+  food_recipes:
+    label: 'Food Recipes'
+  food_recipes.detail:
+    label: 'Detail page'
+    parent: food_recipes
+  food_recipes.detail.stepImage:
+    label: 'Image'
+    parent: food_recipes.detail
+
+settings:
+  food_recipes.detail.stepImage.width:
+      label: 'Width'
+      default: '765c'
+      type: string
+      category: food_recipes.detail.stepImage
+  food_recipes.detail.affiliateImage.width:
+      label: 'Width'
+      default: '150c'
+      type: string
+      category: food_recipes.detail.stepImage

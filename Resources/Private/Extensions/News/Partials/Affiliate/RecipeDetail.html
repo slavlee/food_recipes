@@ -1,5 +1,8 @@
 <f:if condition="{affiliate.linkLabel}">
     <f:then>
+        <f:if condition="{affiliate.image}">
+            <f:image class="affiliate-image" image="{affiliate.image}" width="{settings.detail.affiliateImage.width}" />
+        </f:if>
         <p class="h3">{affiliate.name}</p>
         <f:if condition="{affiliate.description}">
             <f:format.html>{affiliate.description}</f:format.html>
@@ -7,6 +10,9 @@
         <f:link.typolink parameter="{affiliate.link}">{affiliate.linkLabel}</f:link.typolink>
     </f:then>
     <f:else>
+        <f:if condition="{affiliate.image}">
+            <f:image class="affiliate-image" image="{affiliate.image}" width="{settings.detail.affiliateImage.width}" />
+        </f:if>
         <f:link.typolink parameter="{affiliate.link}">{affiliate.name}</f:link.typolink>
         <f:if condition="{affiliate.description}">
             <f:format.html>{affiliate.description}</f:format.html>

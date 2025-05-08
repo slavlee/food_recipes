@@ -94,13 +94,18 @@
                     <f:for each="{newsItem.steps}" as="step" iteration="iteration">
                         <li class="list-group-item" tabindex="0">
                             <div class="recipe-step-number">{step.number}</div>
-                            <div class="recipe-step-description">
-                                <f:format.html>{step.description}</f:format.html>
-                            </div>
-                            <div class="recipe-step-ingredients">
-                                <f:for each="{step.ingredients}" as="usedIngredient">
-                                    <span class="badge text-bg-{f:if(condition: usedIngredient.isMain, then: 'primary', else: 'secondary')}">{usedIngredient.name}</span>
-                                </f:for>
+                            <div class="recipe-step-content">
+                                <f:if condition="{step.image}">
+                                    <f:image class="recipe-step-image" image="{step.image}" width="{settings.detail.stepImage.width}" itemprop="image" />
+                                </f:if>
+                                <div class="recipe-step-description">
+                                    <f:format.html>{step.description}</f:format.html>
+                                </div>
+                                <div class="recipe-step-ingredients">
+                                    <f:for each="{step.ingredients}" as="usedIngredient">
+                                        <span class="badge text-bg-{f:if(condition: usedIngredient.isMain, then: 'primary', else: 'secondary')}">{usedIngredient.name}</span>
+                                    </f:for>
+                                </div>
                             </div>
                             <f:if condition="{iteration.cycle} > 1">
                                 <button type="button" class="recipe-steps-cooking-mode-prev" data-iteration="{iteration.cycle}"><i class="fa-solid fa-arrow-left"></i></button>
