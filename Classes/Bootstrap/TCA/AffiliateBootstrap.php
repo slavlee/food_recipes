@@ -56,7 +56,7 @@ class AffiliateBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'name,--linebreak--,description,--linebreak--,link_label,link'
+                    'showitem' => 'name,--linebreak--,description,--linebreak--,link_label,link,--linebreak--,image'
                 ],
             ],
             'columns' => [
@@ -83,6 +83,12 @@ class AffiliateBootstrap extends AbstractBootstrap
                             'allowedTypes' => ['page', 'url'],
                         ],
                     ]
+                    ),
+                'image' => $this->getImageTCADef(
+                    true,
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_affiliate.image'),
+                    0,
+                    1
                 )
             ]
         ];

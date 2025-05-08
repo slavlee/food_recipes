@@ -28,6 +28,12 @@
 			<trans-unit id="recipe.details.cookingModeToggler">
 				<source>Toggle cooking mode</source>
 			</trans-unit>
+			<trans-unit id="recipe.details.jumptofunc.recipe">
+				<source>Jump to recipe</source>
+			</trans-unit>
+			<trans-unit id="recipe.details.jumptofunc.affiliates">
+				<source>Jump to products</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

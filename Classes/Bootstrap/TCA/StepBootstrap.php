@@ -57,7 +57,7 @@ class StepBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'number,--linebreak--,description,--linebreak--,ingredients'
+                    'showitem' => 'number,--linebreak--,description,--linebreak--,ingredients,--linebreak--,media'
                 ],
             ],
             'columns' => [
@@ -86,6 +86,12 @@ class StepBootstrap extends AbstractBootstrap
                             'itemsProcFunc' => SelectSingleBoxStepIngredients::class . '->itemsProcFunc'
                         ],
                     ]
+                ),
+                'media' => $this->getMediaTCADef(
+                    true,
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.ingredients'),
+                    0,
+                    99
                 )
             ]
         ];

@@ -71,6 +71,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
 				<source>Used ingredients</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.media">
+				<source>Media</source>
+			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_affiliate">
 				<source>Affiliate</source>
@@ -86,6 +89,9 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_affiliate.link">
 				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.image">
+				<source>Image</source>
 			</trans-unit>
 		</body>
 	</file>
