@@ -1,3 +1,8 @@
+## Version dev-1.0.0-6
+- [WIP] Page Template and Styling
+- [WIP] News Detail final Template and Styling
+- [FEATURE] News Detail: Add Affiliate description
+
 ## Version dev-1.0.0-5
 - [WIP] Page Template and Styling
 - [WIP] News Detail final Template and Styling

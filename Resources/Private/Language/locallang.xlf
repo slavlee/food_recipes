@@ -15,6 +15,9 @@
 			<trans-unit id="misc.minutes">
 				<source>minutes</source>
 			</trans-unit>
+			<trans-unit id="misc.affiliate.disclaimer">
+				<source>The following links are affiliate links. Please read the affiliate info on the bottom of this page.</source>
+			</trans-unit>
 
 			<trans-unit id="recipe.details.prep_time">
 				<source>Preperation</source>
