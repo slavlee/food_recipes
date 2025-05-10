@@ -1,3 +1,8 @@
+## Version dev-1.0.0-7
+- [WIP] Page Template and Styling
+- [WIP] News Detail final Template and Styling
+- [WIP] Recipe List
+
 ## Version dev-1.0.0-6
 - [WIP] Page Template and Styling
 - [WIP] News Detail final Template and Styling

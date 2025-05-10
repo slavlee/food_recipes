@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+    <f:switch expression="{settings.templateLayout}">
+        <f:case value="foodListAndDetail">
+            <f:asset.css identifier="food_recipes_cookingmode" href="EXT:food_recipes/Resources/Public/Css/cooking-mode.css" />
+            <f:asset.script identifier="food_recipes_cookingmode" src="EXT:food_recipes/Resources/Public/JavaScript/CookingMode.js" />
+            <f:render section="FoodListAndDetail" arguments="{_all}" />
+        </f:case>
+        <f:defaultCase>
+            <f:render section="Default" arguments="{_all}" />
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+
+<f:section name="FoodListAndDetail">
+@TODO Food Recipe List
+</f:section>
+
+<f:section name="Default">
+
+</f:section>
