@@ -5,8 +5,14 @@ categories:
     label: 'Detail page'
     parent: food_recipes
   food_recipes.detail.stepImage:
-    label: 'Image'
+    label: 'Image (Step)'
     parent: food_recipes.detail
+  food_recipes.list:
+    label: 'List view'
+    parent: food_recipes
+  food_recipes.list.image:
+    label: 'Image (List)'
+    parent: food_recipes.list
 
 settings:
   food_recipes.detail.stepImage.width:
@@ -19,3 +25,13 @@ settings:
       default: '150c'
       type: string
       category: food_recipes.detail.stepImage
+  food_recipes.list.image.width:
+      label: 'Width'
+      default: '576c'
+      type: string
+      category: food_recipes.list.image
+  food_recipes.list.image.height:
+      label: 'Height'
+      default: ''
+      type: string
+      category: food_recipes.list.image

@@ -6,14 +6,26 @@
 			<trans-unit id="misc.hour">
 				<source>hour</source>
 			</trans-unit>
+			<trans-unit id="misc.hour.short">
+				<source>h</source>
+			</trans-unit>
 			<trans-unit id="misc.minute">
 				<source>minute</source>
+			</trans-unit>
+			<trans-unit id="misc.minut.short">
+				<source>min</source>
 			</trans-unit>
 			<trans-unit id="misc.hours">
 				<source>hours</source>
 			</trans-unit>
+			<trans-unit id="misc.hours.short">
+				<source>h</source>
+			</trans-unit>
 			<trans-unit id="misc.minutes">
 				<source>minutes</source>
+			</trans-unit>
+			<trans-unit id="misc.minutes.short">
+				<source>min</source>
 			</trans-unit>
 			<trans-unit id="misc.affiliate.disclaimer">
 				<source>The following links are affiliate links. Please read the affiliate info on the bottom of this page.</source>

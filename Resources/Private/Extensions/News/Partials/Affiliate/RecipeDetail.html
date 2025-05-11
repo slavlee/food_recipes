@@ -1,7 +1,7 @@
 <f:if condition="{affiliate.linkLabel}">
     <f:then>
         <f:if condition="{affiliate.image}">
-            <f:image class="affiliate-image" image="{affiliate.image}" width="{settings.detail.affiliateImage.width}" />
+            <f:image class="affiliate-image" image="{affiliate.image}" width="{settings.detail.affiliateImage.width}" loading="lazy" />
         </f:if>
         <p class="h3">{affiliate.name}</p>
         <f:if condition="{affiliate.description}">

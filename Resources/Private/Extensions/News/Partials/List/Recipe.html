@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:recipe="http://typo3.org/ns/Slavlee/FoodRecipes/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<div class="article-recipe card" itemscope="itemscope" itemtype="http://schema.org/Recipe">
+    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}"></n:link>
+    <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+        <div class="card-img-top">
+            <f:image itemprop="image" image="{newsItem.mediaNonPreviews.0}" width="{settings.list.media.image.width}" height="{settings.list.media.image.height}" loading="lazy" />
+        </div>
+    </n:renderMedia>
+    <div class="card-body">
+      <h3 class="card-title" itemprop="name" tabindex="0">{newsItem.title}</h3>
+    </div>
+    <div class="card-footer">
+        <ul class="list-recipe-details">
+            <li itemprop="prepTime" datetime="{recipe:format.timeInISO8601(value: newsItem.prepTime)}" tabindex="0" title="{f:translate(key: 'recipe.details.prep_time', extensionName:'food_recipes')}"><i class="fa-regular fa-clock"></i> <recipe:format.timeInMinutes short="true">{newsItem.prepTime}</recipe:format.timeInMinutes></li>
+            <li itemprop="cookTime" datetime="{recipe:format.timeInISO8601(value: newsItem.cookTime)}" tabindex="0" title="{f:translate(key: 'recipe.details.cook_time', extensionName:'food_recipes')}"><i class="fa-regular fa-clock"></i> <recipe:format.timeInMinutes short="true">{newsItem.cookTime}</recipe:format.timeInMinutes></li>
+            <li itemprop="yield" tabindex="0" title="{f:translate(key:'recipe.details.servings', extensionName:'food_recipes')}"><i class="fa-solid fa-utensils"></i> {newsItem.servings}</li>
+        </ul>
+    </div>
+  </div>
+</html>

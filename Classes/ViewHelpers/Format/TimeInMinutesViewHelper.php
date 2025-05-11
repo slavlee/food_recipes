@@ -19,7 +19,6 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 class TimeInMinutesViewHelper extends AbstractViewHelper
 {
-    use CompileWithRenderStatic;
     use ExtensionTrait;
 
     /**
@@ -29,6 +28,7 @@ class TimeInMinutesViewHelper extends AbstractViewHelper
     public function initializeArguments()
     {
         $this->registerArgument('value', 'string', 'Value to be formatted', false);
+        $this->registerArgument('short', 'bool', 'Enable short modus to print mins instead of minutes', false, false);
     }
 
     /**
@@ -38,20 +38,26 @@ class TimeInMinutesViewHelper extends AbstractViewHelper
      * @param RenderingContextInterface $renderingContext
      * @return string
      */
-    public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
-        $value = (int)$arguments['value'];
+    public function render() {
+        $value = (int)$this->sarguments['value'];
 
         if (empty($value))
         {
-            $value = (int)$renderChildrenClosure();
+            $value = (int)$this->renderChildren();
+        }
+
+        $suffix = '';
+
+        if ((bool)$this->arguments['short']) {
+            $suffix = '.short';
         }
 
         return DateUtility::minutesToReadableTime(
             $value,
-            LocalizationUtility::translate('misc.hour', self::$extensionKeyAsStatic),
-            LocalizationUtility::translate('misc.hours', self::$extensionKeyAsStatic),
-            LocalizationUtility::translate('misc.minute', self::$extensionKeyAsStatic),
-            LocalizationUtility::translate('misc.minutes', self::$extensionKeyAsStatic)
+            LocalizationUtility::translate('misc.hour' . $suffix, $this->extensionKey),
+            LocalizationUtility::translate('misc.hours' . $suffix, $this->extensionKey),
+            LocalizationUtility::translate('misc.minute' . $suffix, $this->extensionKey),
+            LocalizationUtility::translate('misc.minutes' . $suffix, $this->extensionKey)
         );
     }
 }

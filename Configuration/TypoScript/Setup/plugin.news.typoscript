@@ -17,5 +17,14 @@ plugin.tx_news {
         width = {$food_recipes.detail.affiliateImage.width}
       }
     }
+
+    list {
+      media {
+        image {
+          width = {$food_recipes.list.image.width}
+          height = {$food_recipes.list.image.height}
+        }
+      }
+    }
   }
 }
