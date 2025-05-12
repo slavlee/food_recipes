@@ -1,3 +1,6 @@
+## Version dev-1.0.0-8
+- [WIP] Recipe search plugin
+
 ## Version dev-1.0.0-7
 - [FEATURE] News Detail final Template
 - [FEATURE] Recipe List

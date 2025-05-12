@@ -1,0 +1,12 @@
+<f:form action="search" object="{search}" method="POST">
+    <f:if condition="{categories}">
+        <div class="btn-group" role="group" aria-label="{f:translate(key: 'recipe.list.filter.categories', extensionName: 'food_recipes')}">
+            <f:for each="{categories}" as="parentCategory">
+                <f:for each="{parentCategory.children}" as="category">
+                    <f:form.checkbox class="btn-check" id="searchFilterCategory{category.item.uid}" autocomplete="off" name="categories[]" value="{category.item.uid}" />
+                    <label class="btn btn-outline-primary" for="searchFilterCategory{category.item.uid}">{category.item.title}</label>
+                </f:for>
+            </f:for>
+        </div>
+    </f:if>
+</f:form>

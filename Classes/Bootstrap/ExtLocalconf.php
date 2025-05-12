@@ -17,9 +17,9 @@ declare(strict_types=1);
 
 namespace Slavlee\FoodRecipes\Bootstrap;
 
-use Slavlee\FoodRecipes\Controller\NewsController;
-use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 use Slavlee\FoodRecipes\Bootstrap\Traits\ExtensionTrait;
+use Slavlee\FoodRecipes\Controller\SearchController;
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 class ExtLocalconf extends Base
 {
@@ -30,6 +30,24 @@ class ExtLocalconf extends Base
      */
     public function invoke()
     {
-       
+        $this->configurePlugins();
+    }
+
+    /**
+     * ExtensionUtility::configurePlugin
+     */
+    private function configurePlugins()
+    {
+        ExtensionUtility::configurePlugin(
+            $this->getExtensionKeyAsNamespace(),
+            'Search',
+            [
+               SearchController::class => 'form',
+            ],
+            [
+                SearchController::class => 'form',
+            ],
+            ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
+         );
     }
 }

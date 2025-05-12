@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2025-05-04T20:09:27Z" product-name="food_recipes">
+		<header/>
+		<body>
+			<trans-unit id="foodrecipes_search">
+				<source>Recipe Search</source>
+			</trans-unit>
+			<trans-unit id="foodrecipes_search.description">
+				<source>Form to search and filter recipes</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

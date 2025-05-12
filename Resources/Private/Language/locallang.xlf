@@ -49,6 +49,10 @@
 			<trans-unit id="recipe.details.jumptofunc.affiliates">
 				<source>Jump to products</source>
 			</trans-unit>
+
+			<trans-unit id="recipe.list.filter.categories">
+				<source>Filter recipe by categories</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

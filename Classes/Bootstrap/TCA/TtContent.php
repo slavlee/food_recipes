@@ -34,5 +34,33 @@ class TtContent extends Base
     public function invoke()
     {
         $this->dbTable = 'tt_content';
+        $this->registerPlugins();
+    }
+
+    /**
+     * Add new frontend plugins
+     */
+    private function registerPlugins(): void
+    {
+        $pluginSignature = ExtensionUtility::registerPlugin(
+            $this->getExtensionKeyAsNamespace(),
+            'Search',
+            $this->getLLL('locallang_wizard.xlf:foodrecipes_search'),
+            'ext-news-plugin-news-search-form',
+            'news',
+            $this->getLLL('locallang_wizard.xlf:foodrecipes_search.description'),
+        );
+
+        $this->registerFlexformToCType(
+            $pluginSignature,
+            'RecipeSearch.xml'
+        );
+
+        ExtensionManagementUtility::addToAllTCAtypes(
+            'tt_content',
+            '--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.plugin, pi_flexform',
+            $pluginSignature,
+            'after:palette:headers'
+        );
     }
 }

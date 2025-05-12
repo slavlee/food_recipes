@@ -1,6 +1,9 @@
 categories:
   food_recipes:
     label: 'Food Recipes'
+  food_recipes.view:
+    label: 'View'
+    parent: food_recipes
   food_recipes.detail:
     label: 'Detail page'
     parent: food_recipes
@@ -15,6 +18,21 @@ categories:
     parent: food_recipes.list
 
 settings:
+  food_recipes.view.layoutRootPath:
+      label: 'Layout'
+      default: 'EXT:food_recipes/Resources/Private/Layouts/'
+      type: string
+      category: food_recipes.view
+  food_recipes.view.partialRootPath:
+      label: 'Partial'
+      default: 'EXT:food_recipes/Resources/Private/Partials/'
+      type: string
+      category: food_recipes.view
+  food_recipes.view.templateRootPath:
+      label: 'Template'
+      default: 'EXT:food_recipes/Resources/Private/Templates/'
+      type: string
+      category: food_recipes.view
   food_recipes.detail.stepImage.width:
       label: 'Width'
       default: '765c'

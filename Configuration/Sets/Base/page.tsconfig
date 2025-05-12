@@ -1,1 +1,2 @@
 @import 'EXT:food_recipes/Configuration/TSconfig/Page/*.tsconfig'
+@import 'EXT:food_recipes/Configuration/TSconfig/Page/Mod/Wizards/*.tsconfig'

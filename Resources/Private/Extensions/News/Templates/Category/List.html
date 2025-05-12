@@ -3,17 +3,15 @@
 	  data-namespace-typo3-fluid="true">
 
 <f:layout name="General" />
-<!--
-	=====================
-		Templates/Category/List.html
--->
-
 <f:section name="content">
 	<f:if condition="{categories}">
 		<f:then>
             <f:switch expression="{settings.templateLayout}">
                 <f:case value="foodCategories">
                     <f:render section="foodCategories" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
+                </f:case>
+                <f:case value="foodCategoriesFilter">
+                    <f:render section="foodCategoriesFilter" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
                 </f:case>
                 <f:defaultCase>
                     <f:render section="categoryTree" arguments="{categories:categories,overwriteDemand:overwriteDemand}" />
@@ -59,7 +57,7 @@
             <f:for each="{parentCategory.children}" as="category">
                 <div class="col">
                     <figure class="effect effect-steve effect-notitle">
-                        <f:image image="{category.item.images.0}" width="500c" height="500c"/>
+                        <f:image image="{category.item.images.0}" width="500c" height="500c" />
                         <figcaption>
                             <p class="title">{category.item.title}</p>
                             <f:if condition="{category.item.description}">

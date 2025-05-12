@@ -1,0 +1,16 @@
+plugin.tx_foodrecipes {
+  view {
+    layoutRootPaths {
+      0 = EXT:food_recipes/Resources/Private/Layouts/
+      1 = {$food_recipes.view.layoutRootPath}
+    }
+    partialRootPaths {
+      0 = EXT:food_recipes/Resources/Private/Partials/
+      1 = {$food_recipes.view.partialRootPath}
+    }
+    templateRootPaths {
+      0 = EXT:food_recipes/Resources/Private/Templates/
+      1 = {$food_recipes.view.templateRootPath}
+    }
+  }
+}

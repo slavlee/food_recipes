@@ -1,4 +1,5 @@
 tx_news.templateLayouts {
   foodCategories = LLL:EXT:food_recipes/Resources/Private/Language/locallang_news.xlf:layout.foodCategories
+  foodCategoriesFilter = LLL:EXT:food_recipes/Resources/Private/Language/locallang_news.xlf:layout.foodCategoriesFilter
   foodListAndDetail = LLL:EXT:food_recipes/Resources/Private/Language/locallang_news.xlf:layout.foodListAndDetail
 }
