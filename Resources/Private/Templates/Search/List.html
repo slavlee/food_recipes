@@ -1,0 +1,13 @@
+<f:form class="mb-3" action="search" object="{overwriteDemand}" method="POST">
+    <f:if condition="{categoriesForFilter}">
+        <h3><f:translate key="recipe.list.filter.categories" extensionName="food_recipes" /></h3>
+        <div class="recipe-filter-categories">
+            <f:for each="{categoriesForFilter}" as="parentCategory">
+                <f:for each="{parentCategory.children}" as="category">
+                    <f:link.action action="list" arguments="{overwriteDemand: {categories: category.item.uid}}" tabindex="0" title="{f:translate(key: 'misc.jumptox', extensionName: 'food_recipes', arguments: '{0: category.item.title}')}">{category.item.title}</f:link.action>
+                </f:for>
+            </f:for>
+        </div>
+    </f:if>
+</f:form>
+<f:render partial="Search/ResultList" arguments="{_all}" />

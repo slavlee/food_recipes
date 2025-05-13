@@ -16,6 +16,11 @@
 /********************************************************************
  * COOKING MODE ON - START
  *******************************************************************/
+.cooking-mode {
+    --bs-body-font-size: 1.2rem;
+
+}
+
 .cooking-mode #cookingModeToggler {
     position: fixed;
     top: 0.5rem;
@@ -37,6 +42,7 @@
 
 .cooking-mode .recipe-steps .recipe-steps-title {
     height: var(--recipe-cooking-mode-title-height);
+    text-align: center;
 }
 
 .cooking-mode .recipe-steps .list-recipe-steps {
@@ -53,15 +59,29 @@
     width: 100%;
     display: block;
     height: calc(100% - var(--recipe-cooking-mode-title-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .cooking-mode .recipe-steps .list-recipe-steps .list-group-item:not(.active) {
     transform: translateX(100%);
 }
 
+.cooking-mode .recipe-steps .list-recipe-steps .list-group-item .recipe-steps-cooking-mode-controls {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
 .cooking-mode .recipe-steps-cooking-mode-prev,
 .cooking-mode .recipe-steps-cooking-mode-next {
     display: inline-block;
+}
+
+.cooking-mode .recipe-steps-cooking-mode-prev + .recipe-steps-cooking-mode-next {
+    margin-left: 1rem;
 }
 /********************************************************************
  * COOKING MODE ON - END

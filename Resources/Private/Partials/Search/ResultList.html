@@ -1,20 +1,16 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
-<f:layout name="General" />
-<f:section name="content">
-    <!--TYPO3SEARCH_end-->
-    <f:switch expression="{settings.templateLayout}">
-        <f:case value="foodListAndDetail">
-            <f:render section="FoodListAndDetail" arguments="{_all}" />
-        </f:case>
-        <f:defaultCase>
-            <f:render section="Default" arguments="{_all}" />
-        </f:defaultCase>
-    </f:switch>
-    <!--TYPO3SEARCH_begin-->
-</f:section>
-
+<!--TYPO3SEARCH_end-->
+<f:switch expression="{settings.templateLayout}">
+    <f:case value="foodListAndDetail">
+        <f:render section="FoodListAndDetail" arguments="{_all}" />
+    </f:case>
+    <f:defaultCase>
+        <f:render section="Default" arguments="{_all}" />
+    </f:defaultCase>
+</f:switch>
+<!--TYPO3SEARCH_begin-->
 <f:section name="FoodListAndDetail">
     <f:if condition="{news}">
 		<f:then>

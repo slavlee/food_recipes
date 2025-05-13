@@ -30,6 +30,9 @@
 			<trans-unit id="misc.affiliate.disclaimer">
 				<source>The following links are affiliate links. Please read the affiliate info on the bottom of this page.</source>
 			</trans-unit>
+			<trans-unit id="misc.jumptox">
+				<source>Jump to %s</source>
+			</trans-unit>
 
 			<trans-unit id="recipe.details.prep_time">
 				<source>Preperation</source>
@@ -51,7 +54,7 @@
 			</trans-unit>
 
 			<trans-unit id="recipe.list.filter.categories">
-				<source>Filter recipe by categories</source>
+				<source>Jump to categories</source>
 			</trans-unit>
 		</body>
 	</file>

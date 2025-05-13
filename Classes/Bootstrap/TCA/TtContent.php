@@ -51,9 +51,10 @@ class TtContent extends Base
             $this->getLLL('locallang_wizard.xlf:foodrecipes_search.description'),
         );
 
-        $this->registerFlexformToCType(
-            $pluginSignature,
-            'RecipeSearch.xml'
+        ExtensionManagementUtility::addPiFlexFormValue(
+            '*',
+            'FILE:EXT:news/Configuration/FlexForms/flexform_news_list.xml',
+            $pluginSignature
         );
 
         ExtensionManagementUtility::addToAllTCAtypes(

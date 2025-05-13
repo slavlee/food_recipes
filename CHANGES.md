@@ -1,3 +1,7 @@
+## Version dev-1.0.0-9
+- [FEATURE] Style Cooking Mode
+- [FEATURE] Recipe search plugin
+
 ## Version dev-1.0.0-8
 - [WIP] Recipe search plugin
 

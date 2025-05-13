@@ -1,16 +1,19 @@
 plugin.tx_foodrecipes {
   view {
     layoutRootPaths {
-      0 = EXT:food_recipes/Resources/Private/Layouts/
-      1 = {$food_recipes.view.layoutRootPath}
+      0 = EXT:food_recipes/Resources/Private/Extensions/News/Layouts/
+      5 = EXT:food_recipes/Resources/Private/Layouts/
+      10 = {$food_recipes.view.layoutRootPath}
     }
     partialRootPaths {
-      0 = EXT:food_recipes/Resources/Private/Partials/
-      1 = {$food_recipes.view.partialRootPath}
+      0 = EXT:food_recipes/Resources/Private/Extensions/News/Partials/
+      5 = EXT:food_recipes/Resources/Private/Partials/
+      10 = {$food_recipes.view.partialRootPath}
     }
     templateRootPaths {
-      0 = EXT:food_recipes/Resources/Private/Templates/
-      1 = {$food_recipes.view.templateRootPath}
+      0 = EXT:food_recipes/Resources/Private/Extensions/News/Templates/
+      5 = EXT:food_recipes/Resources/Private/Templates/
+      10 = {$food_recipes.view.templateRootPath}
     }
   }
 }

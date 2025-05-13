@@ -6,9 +6,6 @@
 			<trans-unit id="layout.foodCategories">
 				<target>Essen Kategorien</target>
 			</trans-unit>
-			<trans-unit id="layout.foodCategoriesFilter">
-				<target>Essen Kategorien als Filter</target>
-			</trans-unit>
 			<trans-unit id="recordtype.recipe">
 				<target>Rezept</target>
 			</trans-unit>

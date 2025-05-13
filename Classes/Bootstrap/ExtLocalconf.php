@@ -42,10 +42,10 @@ class ExtLocalconf extends Base
             $this->getExtensionKeyAsNamespace(),
             'Search',
             [
-               SearchController::class => 'form',
+               SearchController::class => 'list,detail',
             ],
             [
-                SearchController::class => 'form',
+                SearchController::class => 'list,detail',
             ],
             ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
          );

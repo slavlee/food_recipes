@@ -17,28 +17,17 @@ declare(strict_types=1);
 
 namespace Slavlee\FoodRecipes\Controller;
 
-use GeorgRinger\News\Domain\Repository\CategoryRepository;
+use GeorgRinger\News\Controller\NewsController;
 use Psr\Http\Message\ResponseInterface;
-use Slavlee\FoodRecipes\Domain\Model\Dto\Search;
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-final class SearchController extends ActionController
+final class SearchController extends NewsController
 {
-
-    public function __construct(
-        private readonly CategoryRepository $categoryRepository
-    ) {}
-
     /**
      * Show search form
-     * @param Search $search
+     * @param array|null $overwriteDemand
      * @return ResponseInterface
      */
-    public function formAction(Search $search = null)
+    public function listAction(?array $overwriteDemand = null): ResponseInterface
     {
-        if (!$search) {
-            $search = new Search();
-        }
-
         $idList = explode(',', $this->settings['categories'] ?? '');
 
         $startingPoint = null;
@@ -48,9 +37,8 @@ final class SearchController extends ActionController
 
         $categories = $this->categoryRepository->findTree($idList, $startingPoint);
 
-        $this->view->assign('categories', $categories);
-        $this->view->assign('search', $search);
+        $this->view->assign('categoriesForFilter', $categories);
 
-        return $this->htmlResponse();
+        return parent::listAction($overwriteDemand);
     }
 }
