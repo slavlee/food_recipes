@@ -1,3 +1,7 @@
+## Version dev-1.0.0-10
+- [CHANGE] Improve Cooking Mode Css in mobile
+- [BUGFIX] Correct alert message output, when news list is empty
+
 ## Version dev-1.0.0-9
 - [FEATURE] Style Cooking Mode
 - [FEATURE] Recipe search plugin

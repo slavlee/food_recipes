@@ -38,16 +38,15 @@
     height: 100%;
     background-color: var(--bs-dark);
     z-index: 9998;
+    padding-top: var(--recipe-cooking-mode-title-height);
 }
 
 .cooking-mode .recipe-steps .recipe-steps-title {
-    height: var(--recipe-cooking-mode-title-height);
-    text-align: center;
+    display: none;
 }
 
 .cooking-mode .recipe-steps .list-recipe-steps {
-    height: calc(100% - var(--recipe-cooking-mode-title-height));
-    overflow-y: auto;
+    height: 100%;
 }
 
 .cooking-mode .recipe-steps .list-recipe-steps .list-group-item {
@@ -57,12 +56,14 @@
     top: var(--recipe-cooking-mode-title-height);
     left: 0;
     width: 100%;
-    display: block;
     height: calc(100% - var(--recipe-cooking-mode-title-height));
+    display: block;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
+    overflow-y: auto;
 }
 
 .cooking-mode .recipe-steps .list-recipe-steps .list-group-item:not(.active) {
@@ -82,6 +83,12 @@
 
 .cooking-mode .recipe-steps-cooking-mode-prev + .recipe-steps-cooking-mode-next {
     margin-left: 1rem;
+}
+
+@media all and (max-height: 480px) {
+    .cooking-mode .recipe-step-images {
+        display: none;
+    }
 }
 /********************************************************************
  * COOKING MODE ON - END

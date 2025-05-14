@@ -56,6 +56,9 @@
 			<trans-unit id="recipe.list.filter.categories">
 				<source>Jump to categories</source>
 			</trans-unit>
+			<trans-unit id="recipe.list.empty">
+				<source>No recipes found</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>
