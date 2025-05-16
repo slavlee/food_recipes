@@ -122,7 +122,8 @@ class NewsBootstrap extends AbstractBootstrap
                     'description' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.steps.description'),
                     'config' => [
                         'minitems' => 0,
-                        'maxitems' => 99
+                        'maxitems' => 99,
+                        'foreign_default_sortby' => 'number'
                     ]
                 ]
             ),

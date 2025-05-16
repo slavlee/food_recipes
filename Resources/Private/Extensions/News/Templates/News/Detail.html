@@ -30,6 +30,7 @@
 				<n:excludeDisplayedNews newsItem="{newsItem}" />
 				<f:if condition="{settings.detail.showMetaTags}">
 					<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+                    <n:metaTag property="keywords" content="{newsItem.keywordsForMetaTag}" />
 				</f:if>
                 <f:if condition="{newsItem.alternativeTitle}">
                     <f:then>

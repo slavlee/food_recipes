@@ -1,4 +1,8 @@
-## Version dev-1.0.0-10
+## Version dev-1.1.0-0
+- [FEATURE] Create Recipe keywords metag dynamically
+- [FEATURE] Add german translation
+
+## Version 1.0.0
 - [CHANGE] Improve Cooking Mode Css in mobile
 - [BUGFIX] Correct alert message output, when news list is empty
 

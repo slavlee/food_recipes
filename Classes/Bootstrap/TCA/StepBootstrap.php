@@ -6,7 +6,6 @@ namespace Slavlee\FoodRecipes\Bootstrap\TCA;
 use Slavlee\FoodRecipes\Bootstrap\AbstractBootstrap;
 use Slavlee\FoodRecipes\Bootstrap\Traits\TcaTrait;
 use Slavlee\FoodRecipes\UserFunctions\FormEngine\SelectSingleBoxStepIngredients;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
 /*
  * This file is part of the TYPO3 extension t3templates_base.

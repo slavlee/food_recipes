@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2025-05-16T20:09:27Z" product-name="food_recipes">
+		<header/>
+		<body>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.recipe">
+				<target>Rezept</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.servings">
+				<target>Portionen</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.prep_time">
+				<target>Vorbereitungszeit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.cook_time">
+				<target>Kochzeit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.ingredients">
+				<target>Zutaten</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps">
+				<target>Schritte</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps.description">
+				<target>WICHTIG: Bitte geben Sie zunächst alle Zutaten ein und speichern Sie diesen Eintrag. Andernfalls können Sie die Zutaten in den folgenden Schritten nicht verwenden.</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.affiliates">
+				<target>Zu diesem Rezept passende Affiliate-Links</target>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient">
+				<target>Zutat</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.quantity">
+				<target>Menge</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit">
+				<target>Einheit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.grams">
+				<target>Gramm</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.cups">
+				<target>Glas</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.tablespoons">
+				<target>Esslöffel</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.teaspoons">
+				<target>Teelöffel</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.pieces">
+				<target>Stücke</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.is_main">
+				<target>ist Hauptzutat</target>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_step.number">
+				<target>Nummer</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
+				<target>Benutzte Zutaten</target>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.link_label">
+				<target>Link - Beschriftung</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_affiliate.image">
+				<target>Bild</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

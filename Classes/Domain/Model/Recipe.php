@@ -201,4 +201,19 @@ class Recipe extends News
 
 		return $this;
 	}
+
+    /**
+     * Return comma seperated string to metag keywords
+     * @return string
+     */
+    public function getKeywordsForMetaTag(): string
+    {
+        $keywords = [$this->getTitle()];
+
+        foreach($this->ingredients as $ingredient) {
+            $keywords[] = $ingredient->getName();
+        }
+
+        return implode(',', $keywords);
+    }
 }

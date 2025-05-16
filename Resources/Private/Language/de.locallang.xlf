@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2025-05-16T20:09:27Z" product-name="food_recipes">
+		<header/>
+		<body>
+			<trans-unit id="misc.hour">
+				<target>Stunde</target>
+			</trans-unit>
+			<trans-unit id="misc.hour.short">
+				<target>Std</target>
+			</trans-unit>
+			<trans-unit id="misc.minute">
+				<target>Minute</target>
+			</trans-unit>
+			<trans-unit id="misc.minut.short">
+				<target>Min</target>
+			</trans-unit>
+			<trans-unit id="misc.hours">
+				<target>Stunden</target>
+			</trans-unit>
+			<trans-unit id="misc.hours.short">
+				<target>Std</target>
+			</trans-unit>
+			<trans-unit id="misc.minutes">
+				<target>Minuten</target>
+			</trans-unit>
+			<trans-unit id="misc.minutes.short">
+				<target>Min</target>
+			</trans-unit>
+			<trans-unit id="misc.affiliate.disclaimer">
+				<target>Bei den folgenden Links handelt es sich um Affiliate-Links. Bitte lesen Sie die Affiliate-Informationen unten auf dieser Seite.</target>
+			</trans-unit>
+			<trans-unit id="misc.jumptox">
+				<target>Springe zu %s</target>
+			</trans-unit>
+
+			<trans-unit id="recipe.details.prep_time">
+				<target>Vorbereitung</target>
+			</trans-unit>
+			<trans-unit id="recipe.details.cook_time">
+				<target>Kochen</target>
+			</trans-unit>
+			<trans-unit id="recipe.details.servings">
+				<target>Portionen</target>
+			</trans-unit>
+			<trans-unit id="recipe.details.cookingModeToggler">
+				<target>Kochmodus (de-)aktivieren</target>
+			</trans-unit>
+			<trans-unit id="recipe.details.jumptofunc.recipe">
+				<target>Zum Rezept springen</target>
+			</trans-unit>
+			<trans-unit id="recipe.details.jumptofunc.affiliates">
+				<target>Zu den Produkten</target>
+			</trans-unit>
+
+			<trans-unit id="recipe.list.filter.categories">
+				<target>Rezepte nach Kategorien</target>
+			</trans-unit>
+			<trans-unit id="recipe.list.empty">
+				<target>Es wurden keine Rezepte gefunden.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
