@@ -44,6 +44,7 @@ class SelectSingleBoxStepIngredients
         $ingredientRepository = GeneralUtility::makeInstance(IngredientRepository::class);
         $querySettings = $ingredientRepository->createQuery()->getQuerySettings();
         $querySettings->setStoragePageIds($storagePageIds);
+        $querySettings->setRespectSysLanguage(false);
         $ingredientRepository->setDefaultQuerySettings($querySettings);
 
         return $ingredientRepository;

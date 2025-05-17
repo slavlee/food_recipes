@@ -1,3 +1,7 @@
+## Version dev-1.1.0-1
+- [FEATURE] New flag optional for ingredient
+- [BUGFIX] No used ingredients in translations
+
 ## Version dev-1.1.0-0
 - [FEATURE] Create Recipe keywords metag dynamically
 - [FEATURE] Add german translation

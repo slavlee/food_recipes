@@ -115,6 +115,9 @@
                         <li class="list-group-item" tabindex="0">
                             <input class="form-check-input me-1" type="checkbox" value="" id="ingredientCheckbox{ingredient.uid}">
                             <label class="form-check-label" for="ingredientCheckbox{ingredient.uid}">{ingredient.quantity} <f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.{ingredient.unit}" extensionName="food_recipes" /><strong> {ingredient.name}</strong></label>
+                            <f:if condition="{ingredient.isOptional}">
+                                <span class="recipe-ingredient-optional"><f:translate key="recipe.detail.ingredient.optional" extensionName="food_recipes" /></span>
+                            </f:if>
                         </li>
                     </f:for>
                 </ul>
@@ -135,7 +138,22 @@
                                     </div>
                                     <div class="recipe-step-ingredients">
                                         <f:for each="{step.ingredients}" as="usedIngredient">
-                                            <span class="badge text-bg-{f:if(condition: usedIngredient.isMain, then: 'primary', else: 'secondary')}">{usedIngredient.name}</span>
+                                            <f:if condition="{usedIngredient.isMain}">
+                                                <f:then>
+                                                    <f:variable name="usedIngredientBadge">primary</f:variable>
+                                                </f:then>
+                                                <f:else>
+                                                    <f:if condition="{usedIngredient.isOptional}">
+                                                        <f:then>
+                                                            <f:variable name="usedIngredientBadge">muted</f:variable>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <f:variable name="usedIngredientBadge">secondary</f:variable>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:else>
+                                            </f:if>
+                                            <span class="badge text-bg-{usedIngredientBadge}">{usedIngredient.name}</span>
                                         </f:for>
                                     </div>
                                 </div>

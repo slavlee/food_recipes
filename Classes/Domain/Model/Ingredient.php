@@ -38,6 +38,12 @@ class Ingredient extends AbstractEntity
      */
     protected bool $isMain = false;
 
+    /**
+     * Summary of isOptional
+     * @var bool
+     */
+    protected bool $isOptional = false;
+
 	/**
 	 * Get the value of name
 	 *
@@ -133,4 +139,28 @@ class Ingredient extends AbstractEntity
 
 		return $this;
 	}
+
+    /**
+     * Get summary of isOptional
+     *
+     * @return  bool
+     */
+    public function getIsOptional()
+    {
+        return $this->isOptional;
+    }
+
+    /**
+     * Set summary of isOptional
+     *
+     * @param  bool  $isOptional  Summary of isOptional
+     *
+     * @return  self
+     */
+    public function setIsOptional(bool $isOptional)
+    {
+        $this->isOptional = $isOptional;
+
+        return $this;
+    }
 }

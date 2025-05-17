@@ -57,7 +57,7 @@ class IngredientBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'name, quantity, unit, is_main'
+                    'showitem' => 'name, quantity, unit, is_main, is_optional'
                 ],
             ],
             'columns' => [
@@ -117,6 +117,11 @@ class IngredientBootstrap extends AbstractBootstrap
                 'is_main' => $this->getCheckTCADef(
                     true,
                     $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.is_main'),
+                    false
+                ),
+                'is_optional' => $this->getCheckTCADef(
+                    true,
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.is_optional'),
                     false
                 )
             ],
