@@ -109,7 +109,14 @@
             </section>
             <button type="button" class="btn btn-primary" id="cookingModeToggler" href="#" tabindex="-1"><f:translate key="recipe.details.cookingModeToggler" extensionName="food_recipes" /></button>
             <section class="recipe-ingredients" itemprop="ingredients">
-                <h2><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.ingredients" extensionName="food_recipes" /></h2>
+                <header class="recipe-header">
+                    <h2><f:translate key="LLL:EXT:food_recipes/Resources/Private/Language/locallang_db.xlf:tx_foodrecipes_domain_model_recipe.ingredients" extensionName="food_recipes" /></h2>
+                    <div class="recipe-ingredients-calculator">
+                        <f:asset.script identifier="food_recipes_ingredientcalculator" src="EXT:food_recipes/Resources/Public/JavaScript/IngredientCalculator.js" />
+                        <label for="formRecipeServings{newsItem.uid}" class="form-label"><f:translate key="recipe.details.servings.calculator" extensionName="food_recipes" /></label>
+                        <input id="formRecipeServings{newsItem.uid}" class="form-control form-recipe-servings" name="servings" value="{newsItem.servings}" type="number" step="1" min="1" />
+                    </div>
+                </header>
                 <ul class="list-group list-group-flush list-ingredients">
                     <f:for each="{newsItem.ingredients}" as="ingredient" iteration="i">
                         <li class="list-group-item" tabindex="0">

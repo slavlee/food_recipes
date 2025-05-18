@@ -43,6 +43,9 @@
 			<trans-unit id="recipe.details.servings">
 				<source>Servings</source>
 			</trans-unit>
+			<trans-unit id="recipe.details.servings.calculator">
+				<source>Scale servings</source>
+			</trans-unit>
 			<trans-unit id="recipe.details.cookingModeToggler">
 				<source>Toggle cooking mode</source>
 			</trans-unit>

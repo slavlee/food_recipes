@@ -43,6 +43,9 @@
 			<trans-unit id="recipe.details.servings">
 				<target>Portionen</target>
 			</trans-unit>
+			<trans-unit id="recipe.details.servings.calculator">
+				<target>Portionen umrechnen</target>
+			</trans-unit>
 			<trans-unit id="recipe.details.cookingModeToggler">
 				<target>Kochmodus (de-)aktivieren</target>
 			</trans-unit>

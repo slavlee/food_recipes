@@ -1,10 +1,9 @@
-## Version dev-1.1.0-1
+## Version 1.1.0
+- [FEATURE] Add Ingredient Calculator
 - [FEATURE] New flag optional for ingredient
-- [BUGFIX] No used ingredients in translations
-
-## Version dev-1.1.0-0
 - [FEATURE] Create Recipe keywords metag dynamically
 - [FEATURE] Add german translation
+- [BUGFIX] No used ingredients in translations
 
 ## Version 1.0.0
 - [CHANGE] Improve Cooking Mode Css in mobile
