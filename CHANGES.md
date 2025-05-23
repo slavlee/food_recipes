@@ -1,5 +1,6 @@
-## Version 1.2.0
+## Version dev-1.2.0
 - [CHANGE] Recipe in List is an itemprop Article
+- [CHANGE] Use FlexForm/TypoScript media size settings
 
 ## Version 1.1.0
 - [FEATURE] Add Ingredient Calculator

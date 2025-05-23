@@ -3,14 +3,13 @@
       xmlns:recipe="http://typo3.org/ns/Slavlee/FoodRecipes/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 <div class="article-recipe card" itemscope="itemscope" itemtype="http://schema.org/Article">
-    <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}"></n:link>
     <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
         <div class="card-img-top">
-            <f:image itemprop="image" image="{newsItem.mediaNonPreviews.0}" width="{settings.list.media.image.width}" height="{settings.list.media.image.height}" loading="lazy" />
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}"><f:image itemprop="image" image="{newsItem.mediaPreviews.0}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.list.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}" loading="lazy" /></n:link>
         </div>
     </n:renderMedia>
     <div class="card-body">
-      <h3 class="card-title" itemprop="name" tabindex="0">{newsItem.title}</h3>
+      <h3 class="card-title" itemprop="name" tabindex="0"><n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" additionalAttributes="{itemprop:'url'}">{newsItem.title}</n:link></h3>
     </div>
     <div class="card-footer">
         <ul class="list-recipe-details">
