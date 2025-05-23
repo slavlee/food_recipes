@@ -1,3 +1,6 @@
+## Version 1.2.0
+- [CHANGE] Recipe in List is an itemprop Article
+
 ## Version 1.1.0
 - [FEATURE] Add Ingredient Calculator
 - [FEATURE] New flag optional for ingredient
