@@ -1,4 +1,5 @@
 ## Version dev-1.2.0
+- [FEATURE] Add StructuredDataUtility
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 
