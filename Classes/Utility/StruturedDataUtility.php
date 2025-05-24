@@ -53,7 +53,10 @@ class StruturedDataUtility
         $simpleList = [];
 
         foreach ($ingredients as $ingredient) {
-            $formattedIngredients[] = $ingredient->getTitle();
+            /**
+             * @var \Slavlee\FoodRecipes\Domain\Model\Ingredient $ingredient
+             */
+            $simpleList[] = $ingredient->getName();
         }
 
         return $simpleList;

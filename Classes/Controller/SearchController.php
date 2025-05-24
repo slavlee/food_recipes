@@ -24,6 +24,7 @@ use GeorgRinger\News\Domain\Repository\TagRepository;
 use Psr\Http\Message\ResponseInterface;
 use Slavlee\FoodRecipes\Utility\StruturedDataUtility;
 use TYPO3\CMS\Core\Page\AssetCollector;
+use TYPO3\CMS\Extbase\Http\ForwardResponse;
 
 final class SearchController extends NewsController
 {
@@ -43,6 +44,11 @@ final class SearchController extends NewsController
      */
     public function listAction(?array $overwriteDemand = null): ResponseInterface
     {
+        $possibleRedirect = $this->forwardToDetailActionWhenRequested();
+        if ($possibleRedirect) {
+            return $possibleRedirect;
+        }
+
         $idList = explode(',', $this->settings['categories'] ?? '');
 
         $startingPoint = null;
@@ -55,25 +61,5 @@ final class SearchController extends NewsController
         $this->view->assign('categoriesForFilter', $categories);
 
         return parent::listAction($overwriteDemand);
-    }
-
-    /**
-     * Summary of detailAction
-     * @param \GeorgRinger\News\Domain\Model\News $news
-     * @param mixed $currentPage
-     * @return ResponseInterface
-     */
-    public function detailAction(?\GeorgRinger\News\Domain\Model\News $news = null, $currentPage = 1): ResponseInterface
-    {
-        // Add structured data
-        $this->assetCollector->addInlineJavaScript(
-            'food_recipes_structured_data_' . $news->getUid(),
-            StruturedDataUtility::getRecipeStructuredData($news),
-            [
-                'type' => 'application/ld+json',
-            ]
-        );
-        debug(__FILE__);
-        return parent::detailAction($news, $currentPage);
     }
 }
