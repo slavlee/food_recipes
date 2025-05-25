@@ -60,9 +60,11 @@ const cookingMode = {
   start: function() {
     this.steps.querySelector('.list-group-item:first-child').classList.add('active');
     document.querySelector('body').classList.add('cooking-mode');
+    this.requestWakeLock();
   },
   end: function() {
     document.querySelector('body').classList.remove('cooking-mode');
+    this.releaseWakeLock();
   },
   goToStep: function(targetIndex) {
     this.steps.querySelectorAll('.list-group-item.active').forEach((element) => {
@@ -74,6 +76,29 @@ const cookingMode = {
         element.classList.add('active');
       }
     });
+  },
+  requestWakeLock: async function() {
+    if ('wakeLock' in navigator) {
+      try {
+        this.wakeLock = await navigator.wakeLock.request('screen');
+        console.log('Wake Lock is active');
+      } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+      }
+    } else {
+      console.warn('Wake Lock API is not supported in this browser.');
+    }
+  },
+  releaseWakeLock: async function() {
+    if (this.wakeLock) {
+      try {
+        await this.wakeLock.release();
+        console.log('Wake Lock has been released');
+      } catch (err) {
+        console.error(`${err.name}, ${err.message}`);
+      }
+      this.wakeLock = null;
+    }
   }
 };
 
