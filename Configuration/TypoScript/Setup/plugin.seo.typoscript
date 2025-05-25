@@ -1,0 +1,20 @@
+plugin.tx_seo {
+  config {
+		xmlSitemap {
+			sitemaps {
+        news {
+          excludedTypes = 1,2,10
+        }
+        food_recipes < .news
+        food_recipes {
+          config {
+            excludedTypes = 0,1,2,10
+            url {
+              hrDate >
+            }
+          }
+        }
+      }
+    }
+  }
+}

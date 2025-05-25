@@ -3,6 +3,7 @@
 - [FEATURE] Add Recipe structured data for Detail view
 - [FEATURE] Extend Ingredient to link to a recipe
 - [FEATURE] Toggle WakeLock on CookingMode
+- [FEATURE] Add XML Sitemap for recipe
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 
