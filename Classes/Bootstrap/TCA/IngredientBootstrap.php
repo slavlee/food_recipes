@@ -6,7 +6,7 @@ namespace Slavlee\FoodRecipes\Bootstrap\TCA;
 use Slavlee\FoodRecipes\Bootstrap\AbstractBootstrap;
 use Slavlee\FoodRecipes\Bootstrap\Traits\TcaTrait;
 use Slavlee\FoodRecipes\Register\RecipeRegister;
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use Slavlee\FoodRecipes\Register\ContentRegister;
 
 /*
  * This file is part of the TYPO3 extension t3templates_base.
@@ -57,7 +57,7 @@ class IngredientBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'name, quantity, unit, is_main, is_optional'
+                    'showitem' => 'name, quantity, unit, is_main, is_optional, recipe_as_ingredient'
                 ],
             ],
             'columns' => [
@@ -123,7 +123,27 @@ class IngredientBootstrap extends AbstractBootstrap
                     true,
                     $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.is_optional'),
                     false
-                )
+                ),
+                'recipe_as_ingredient' => $this->getGroupTCADef(
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.recipe'),
+                    'tx_news_domain_model_news',
+                    'manyToOne',
+                    0,
+                    1,
+                    false,
+                    [
+                        'description' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.recipe.description'),
+                        'config' => [
+                            'maxitems' => 1,
+                            'suggestOptions' => [
+                                'default' => [
+                                    'additionalSearchFields' => 'teaser,bodytext',
+                                    'addWhere' => 'AND tx_news_domain_model_news.type = ' . ContentRegister::NEWSTYPE_RECIPE,
+                                ],
+                            ],
+                        ]
+                    ]
+                ),
             ],
         ];
 

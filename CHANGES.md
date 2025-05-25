@@ -1,6 +1,7 @@
 ## Version dev-1.2.0
 - [FEATURE] Add StructuredDataUtility
 - [FEATURE] Add Recipe structured data for Detail view
+- [FEATURE] Extend Ingredient to link to a recipe
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 

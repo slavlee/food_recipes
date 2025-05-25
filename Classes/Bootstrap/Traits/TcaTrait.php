@@ -613,4 +613,43 @@ trait TcaTrait
 
         return $default;
     }
+
+    /**
+     * Return example TCA def for a group
+     * @param string $label
+     * @param string $foreignTable
+     * @param string $foreignField
+     * @param string $foreignTableField
+     * @param bool $exclude
+     * @param array $additionalConfig
+     * @return array
+     */
+    public function getGroupTCADef(
+            string $label,
+            string $allowed,
+            string $relationship = 'manyToOne',
+            int $minitems = 0,
+            int $size = 1,
+            bool $exclude = false,
+            array $additionalConfig = []
+    ): array
+    {
+        $default = [
+            'exclude' => $exclude ? 1 : 0,
+            'label' => $label,
+            'config' => [
+                'type' => 'group',
+                'allowed' => $allowed,
+                'relationship' => $relationship,
+                'minitems' => $minitems,
+                'size' => $size,
+            ],
+        ];
+
+        if (!empty($additionalConfig)) {
+            $default = \array_replace_recursive($default, $additionalConfig);
+        }
+
+        return $default;
+    }
 }

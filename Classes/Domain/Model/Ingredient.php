@@ -10,7 +10,10 @@ declare(strict_types=1);
 
 namespace Slavlee\FoodRecipes\Domain\Model;
 
+use GeorgRinger\News\Domain\Model\News;
+use TYPO3\CMS\Extbase\Annotation\ORM\Lazy;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
+use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 class Ingredient extends AbstractEntity
 {
@@ -43,6 +46,23 @@ class Ingredient extends AbstractEntity
      * @var bool
      */
     protected bool $isOptional = false;
+
+    /**
+     * Summary of recipeAsIngredient
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<News>
+     */
+    #[Lazy]
+    protected ObjectStorage $recipeAsIngredient;
+
+    public function __construct()
+    {
+        $this->initializeObject();
+    }
+
+    public function initializeObject(): void
+    {
+        $this->recipeAsIngredient = new ObjectStorage();
+    }
 
 	/**
 	 * Get the value of name
@@ -160,6 +180,48 @@ class Ingredient extends AbstractEntity
     public function setIsOptional(bool $isOptional)
     {
         $this->isOptional = $isOptional;
+
+        return $this;
+    }
+
+	/**
+	 * Get summary of recipeAsIngredient
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<News>|null
+	 */
+	public function getRecipeAsIngredient(): ?ObjectStorage
+	{
+		return $this->recipeAsIngredient;
+	}
+
+	/**
+	 * Set summary of recipeAsIngredient
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<News> $recipeAsIngredient
+	 *
+	 * @return self
+	 */
+	public function setRecipeAsIngredient(ObjectStorage $recipeAsIngredient): self
+	{
+		$this->recipeAsIngredient = $recipeAsIngredient;
+
+		return $this;
+	}
+
+    public function addRecipeAsIngredient(Recipe $recipe): self
+    {
+        if (!$this->recipeAsIngredient->contains($recipe)) {
+            $this->recipeAsIngredient->attach($recipe);
+        }
+
+        return $this;
+    }
+
+    public function removeRecipeAsIngredient(Recipe $recipe): self
+    {
+        if ($this->recipeAsIngredient->contains($recipe)) {
+            $this->recipeAsIngredient->detach($recipe);
+        }
 
         return $this;
     }

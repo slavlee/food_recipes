@@ -88,7 +88,7 @@ class StepBootstrap extends AbstractBootstrap
                 ),
                 'media' => $this->getMediaTCADef(
                     true,
-                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.ingredients'),
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.media'),
                     0,
                     99
                 )

@@ -64,6 +64,12 @@
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.is_optional">
 				<source>is optional ingredient</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.recipe">
+				<source>Recipe as ingredient</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.recipe.description">
+				<source>If you choose another recipe as ingredient, the given name will be linked to the recipe.</source>
+			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_step.number">
 				<source>Number</source>
