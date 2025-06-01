@@ -18,6 +18,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.ingredients">
 				<source>Ingredients</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.tools">
+				<source>Required tools</source>
+			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps">
 				<source>Steps</source>
 			</trans-unit>
@@ -69,6 +72,28 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.recipe.description">
 				<source>If you choose another recipe as ingredient, the given name will be linked to the recipe.</source>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_tool">
+				<source>Tool</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.is_optional">
+				<source>is optional</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.alternatives">
+				<source>Alternative tools</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.alternatives.description">
+				<source>Comma separated list of tool names</source>
 			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_step.number">

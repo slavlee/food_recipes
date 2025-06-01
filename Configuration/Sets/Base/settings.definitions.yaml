@@ -10,6 +10,12 @@ categories:
   food_recipes.detail.stepImage:
     label: 'Image (Step)'
     parent: food_recipes.detail
+  food_recipes.detail.affiliateImage:
+    label: 'Image (Affiliate)'
+    parent: food_recipes.detail
+  food_recipes.detail.toolImage:
+    label: 'Image (Tool)'
+    parent: food_recipes.detail
   food_recipes.list:
     label: 'List view'
     parent: food_recipes
@@ -42,7 +48,12 @@ settings:
       label: 'Width'
       default: '150c'
       type: string
-      category: food_recipes.detail.stepImage
+      category: food_recipes.detail.affiliateImage
+  food_recipes.detail.toolImage.width:
+      label: 'Width'
+      default: '25c'
+      type: string
+      category: food_recipes.detail.toolImage
   food_recipes.list.image.width:
       label: 'Width'
       default: '576c'

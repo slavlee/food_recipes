@@ -40,7 +40,7 @@ class StepBootstrap extends AbstractBootstrap
                 'sortby' => 'sorting',
                 'default_sortby' => 'number',
                 'versioningWS' => true,
-                'iconfile' => $this->getIconPath('recipe.svg'),
+                'iconfile' => $this->getIconPath('step.svg'),
                 'languageField' => 'sys_language_uid',
                 'transOrigPointerField' => 'l10n_parent',
                 'transOrigDiffSourceField' => 'l10n_diffsource',

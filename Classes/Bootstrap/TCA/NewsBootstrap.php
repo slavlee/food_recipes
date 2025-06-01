@@ -40,7 +40,7 @@ class NewsBootstrap extends AbstractBootstrap
         ExtensionManagementUtility::addFieldsToPalette(
             $this->dbTable,
             RecipeRegister::PALETTE_RECIPE,
-            'servings,--linebreak--,prep_time,cook_time,--linebreak--,ingredients'
+            'servings,--linebreak--,prep_time,cook_time,--linebreak--,ingredients,--linebreak--,tools'
         );
 
         ExtensionManagementUtility::addFieldsToPalette(
@@ -108,8 +108,32 @@ class NewsBootstrap extends AbstractBootstrap
                 [
                     'config' => [
                         'minitems' => 1,
-                        'maxitems' => 99
+                        'maxitems' => 99,
+                        'appearance' => [
+                            'collapseAll' => true,
+                        ],
                     ]
+                ]
+            ),
+
+            'tools' => $this->getSelectTCADef(
+                $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.tools'),
+                'selectMultipleSideBySide',
+                false,
+                false,
+                [
+                    'config' => [
+                        'foreign_table' => 'tx_foodrecipes_domain_model_tool',
+                        'foreign_table_where' => ' AND {#tx_foodrecipes_domain_model_tool}.{#sys_language_uid} IN (0,-1)',
+                        'size' => 5,
+                        'autoSizeMax' => 10,
+                        'multiple' => true,
+                        'behaviour' => [
+                            'allowLanguageSynchronization' => 0,
+                        ],
+                    ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
                 ]
             ),
             'steps' => $this->getInlineTCADef(
@@ -123,21 +147,28 @@ class NewsBootstrap extends AbstractBootstrap
                     'config' => [
                         'minitems' => 0,
                         'maxitems' => 99,
-                        'foreign_default_sortby' => 'number'
+                        'foreign_default_sortby' => 'number',
+                        'appearance' => [
+                            'expandSingle' => true,
+                        ],
                     ]
                 ]
             ),
-            'affiliates' => $this->getInlineTCADef(
+            'affiliates' => $this->getSelectTCADef(
                 $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.affiliates'),
-                'tx_foodrecipes_domain_model_affiliate',
-                'recipe',
-                $this->dbTable,
-                true,
+                'selectMultipleSideBySide',
+                false,
+                false,
                 [
                     'config' => [
-                        'minitems' => 0,
-                        'maxitems' => 99,
+                        'foreign_table' => 'tx_foodrecipes_domain_model_affiliate',
+                        'foreign_table_where' => ' AND {#tx_foodrecipes_domain_model_affiliate}.{#sys_language_uid} IN (0,-1)',
+                        'size' => 5,
+                        'autoSizeMax' => 10,
+                        'multiple' => true,
                     ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
                 ]
             )
         ];

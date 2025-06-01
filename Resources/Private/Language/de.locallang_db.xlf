@@ -18,6 +18,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.ingredients">
 				<target>Zutaten</target>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.tools">
+				<target>Benötigte Utensilien</target>
+			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.steps">
 				<target>Schritte</target>
 			</trans-unit>
@@ -64,6 +67,25 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
 				<target>Benutzte Zutaten</target>
+			</trans-unit>
+
+			<trans-unit id="tx_foodrecipes_domain_model_tool">
+				<target>Utensil</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.description">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.is_optional">
+				<target>ist optional</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.image">
+				<target>Bild</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.alternatives">
+				<target>Alternatives Utensil</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_tool.alternatives.description">
+				<target>Kommagetrennte Liste von Utensilien</target>
 			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_affiliate.description">

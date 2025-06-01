@@ -41,7 +41,7 @@ class IngredientBootstrap extends AbstractBootstrap
                 'sortby' => 'sorting',
                 'default_sortby' => 'name',
                 'versioningWS' => true,
-                'iconfile' => $this->getIconPath('recipe.svg'),
+                'iconfile' => $this->getIconPath('ingredient.svg'),
                 'languageField' => 'sys_language_uid',
                 'transOrigPointerField' => 'l10n_parent',
                 'transOrigDiffSourceField' => 'l10n_diffsource',

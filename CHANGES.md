@@ -1,9 +1,10 @@
-## Version dev-1.2.0
+## Version dev-main
 - [FEATURE] Add StructuredDataUtility
 - [FEATURE] Add Recipe structured data for Detail view
 - [FEATURE] Extend Ingredient to link to a recipe
 - [FEATURE] Toggle WakeLock on CookingMode
 - [FEATURE] Add XML Sitemap for recipe
+- [FEATURE] Extend Recipe with new relation to new model tools
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 
