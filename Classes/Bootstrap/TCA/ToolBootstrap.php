@@ -54,7 +54,7 @@ class ToolBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'name, description, is_optional, image, alternatives'
+                    'showitem' => 'name, description, is_optional, image, alternatives, affiliate'
                 ],
             ],
             'columns' => [
@@ -86,7 +86,20 @@ class ToolBootstrap extends AbstractBootstrap
                     [
                         'description' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_tool.alternatives.description'),
                     ]
-                )
+                ),
+                'affiliate' => $this->getGroupTCADef(
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_affiliate'),
+                    'tx_foodrecipes_domain_model_affiliate',
+                    'manyToOne',
+                    0,
+                    1,
+                    false,
+                    [
+                        'config' => [
+                            'maxitems' => 1,
+                        ]
+                    ]
+                ),
             ],
         ];
 

@@ -47,6 +47,12 @@ class Tool extends AbstractEntity
 	 */
 	protected string $alternatives = '';
 
+	/**
+	 * Summary of affiliate
+	 * @var Affiliate
+	 */
+    protected ?Affiliate $affiliate = null;
+
 	// Getter and Setter for name
 	public function getName(): string
 	{
@@ -100,5 +106,15 @@ class Tool extends AbstractEntity
 	public function setAlternatives(string $alternatives): void
 	{
 		$this->alternatives = $alternatives;
+	}
+
+	public function getAffiliate(): ?Affiliate
+	{
+		return $this->affiliate;
+	}
+
+	public function setAffiliate(?Affiliate $affiliate): void
+	{
+		$this->affiliate = $affiliate;
 	}
 }
