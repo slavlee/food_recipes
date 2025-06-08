@@ -10,9 +10,9 @@ declare(strict_types=1);
 
 namespace Slavlee\FoodRecipes\Domain\Repository;
 
-use GeorgRinger\News\Domain\Repository\NewsRepository;
+use TYPO3\CMS\Extbase\Persistence\Repository;
 
-class StepRepository extends NewsRepository
+class StepRepository extends Repository
 {
 
 }

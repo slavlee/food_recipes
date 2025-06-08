@@ -110,6 +110,10 @@ class IngredientBootstrap extends AbstractBootstrap
                                     'label' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.milliliter'),
                                     'value' => RecipeRegister::UNIT_ML
                                 ],
+                                [
+                                    'label' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient.unit.I.pinch'),
+                                    'value' => RecipeRegister::UNIT_PINCH
+                                ],
                             ],
                         ],
                     ],

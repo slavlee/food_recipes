@@ -61,6 +61,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.milliliter">
 				<source>Milliliter</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.pinch">
+				<source>Pinch</source>
+			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.is_main">
 				<source>is main ingredient</source>
 			</trans-unit>
@@ -104,6 +107,9 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
 				<source>Used ingredients</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.tools">
+				<source>Used tools</source>
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_step.media">
 				<source>Media</source>

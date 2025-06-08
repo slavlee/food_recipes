@@ -5,6 +5,9 @@
 - [FEATURE] Toggle WakeLock on CookingMode
 - [FEATURE] Add XML Sitemap for recipe
 - [FEATURE] Extend Recipe with new relation to new model tools
+- [FEATURE] Extend Step for used tools
+- [FEATURE] New Ingredient unit: pinch
+- [FEATURE] nl2br for recipe teaser
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 

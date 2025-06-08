@@ -44,7 +44,7 @@
 				<target>Gramm</target>
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.cups">
-				<target>Glas</target>
+				<target>Tasse</target>
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.tablespoons">
 				<target>Esslöffel</target>
@@ -54,6 +54,9 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.pieces">
 				<target>Stücke</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_ingredient.unit.I.pinch">
+				<target>Prise</target>
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient.is_main">
 				<target>ist Hauptzutat</target>
@@ -67,6 +70,9 @@
 			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_step.ingredients">
 				<target>Benutzte Zutaten</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.tools">
+				<target>Benutzte Utensilien</target>
 			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_tool">

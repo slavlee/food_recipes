@@ -18,6 +18,7 @@ class RecipeRegister implements SingletonInterface
     const UNIT_TEASPOONS = 'teaspoons';
     const UNIT_PIECES = 'pieces';
     const UNIT_ML = 'milliliter';
+    const UNIT_PINCH = 'pinch';
 
     const PALETTE_RECIPE = 'recipe';
     const PALETTE_RECIPESTEPS = 'recipe_steps';

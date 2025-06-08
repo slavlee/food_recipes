@@ -6,6 +6,7 @@ namespace Slavlee\FoodRecipes\Bootstrap\TCA;
 use Slavlee\FoodRecipes\Bootstrap\AbstractBootstrap;
 use Slavlee\FoodRecipes\Bootstrap\Traits\TcaTrait;
 use Slavlee\FoodRecipes\UserFunctions\FormEngine\SelectSingleBoxStepIngredients;
+use Slavlee\FoodRecipes\UserFunctions\FormEngine\SelectSingleBoxStepTools;
 
 /*
  * This file is part of the TYPO3 extension t3templates_base.
@@ -56,7 +57,7 @@ class StepBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'number,--linebreak--,description,--linebreak--,ingredients,--linebreak--,media'
+                    'showitem' => 'number,--linebreak--,description,--linebreak--,ingredients,tools,--linebreak--,media'
                 ],
             ],
             'columns' => [
@@ -83,6 +84,17 @@ class StepBootstrap extends AbstractBootstrap
                     [
                         'config' => [
                             'itemsProcFunc' => SelectSingleBoxStepIngredients::class . '->itemsProcFunc'
+                        ],
+                    ]
+                ),
+                'tools' => $this->getSelectTCADef(
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.tools'),
+                    'selectSingleBox',
+                    true,
+                    false,
+                    [
+                        'config' => [
+                            'itemsProcFunc' => SelectSingleBoxStepTools::class . '->itemsProcFunc'
                         ],
                     ]
                 ),

@@ -10,6 +10,9 @@ declare(strict_types=1);
 
 namespace Slavlee\FoodRecipes\Domain\Model;
 
+
+use Slavlee\FoodRecipes\Domain\Model\Ingredient;
+use Slavlee\FoodRecipes\Domain\Model\Tool;
 use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
@@ -31,7 +34,13 @@ class Step extends AbstractEntity
      * Summary of ingredients
      * @var ObjectStorage<Ingredient>
      */
-    protected ObjectStorage $ingredients;
+    protected ?ObjectStorage $ingredients = null;
+
+    /**
+     * Summary of tools
+     * @var ObjectStorage<Tool>
+     */
+    protected ?ObjectStorage $tools = null;
 
     /**
      * @var ObjectStorage<FileReference>
@@ -41,6 +50,7 @@ class Step extends AbstractEntity
     public function __construct()
     {
         $this->ingredients = new ObjectStorage();
+        $this->tools = new ObjectStorage();
         $this->media = new ObjectStorage();
     }
 
@@ -97,7 +107,7 @@ class Step extends AbstractEntity
 	 *
 	 * @return ObjectStorage<Ingredient>
 	 */
-	public function getIngredients(): ObjectStorage
+	public function getIngredients(): ?ObjectStorage
 	{
 		return $this->ingredients;
 	}
@@ -112,6 +122,30 @@ class Step extends AbstractEntity
 	public function setIngredients(ObjectStorage $ingredients): self
 	{
 		$this->ingredients = $ingredients;
+
+		return $this;
+	}
+
+    /**
+	 * Get summary of tools
+	 *
+	 * @return ObjectStorage<Tool>
+	 */
+	public function getTools(): ?ObjectStorage
+	{
+		return $this->tools;
+	}
+
+	/**
+	 * Set summary of tools
+	 *
+	 * @param ObjectStorage<Tool>  $tools
+	 *
+	 * @return self
+	 */
+	public function setTools(ObjectStorage $tools): self
+	{
+		$this->tools = $tools;
 
 		return $this;
 	}
