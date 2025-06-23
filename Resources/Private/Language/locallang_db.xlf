@@ -15,6 +15,21 @@
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.cook_time">
 				<source>Cooking time</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time">
+				<source>Wait time</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time.I.waiting">
+				<source>Waiting</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time.I.fermentation">
+				<source>Fermentation</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time.label">
+				<source>Frontend label for wait time</source>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.difficulty">
+				<source>Difficulty</source>
+			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.ingredients">
 				<source>Ingredients</source>
 			</trans-unit>

@@ -15,6 +15,21 @@
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.cook_time">
 				<target>Kochzeit</target>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time">
+				<target>Wartezeit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time.I.waiting">
+				<target>Wartezeit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time.I.fermentation">
+				<target>Gährzeit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.wait_time.label">
+				<target>Beschriftung für das Frontend der Wartezeit</target>
+			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_recipe.difficulty">
+				<target>Schwierigkeit</target>
+			</trans-unit>
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.ingredients">
 				<target>Zutaten</target>
 			</trans-unit>

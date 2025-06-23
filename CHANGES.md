@@ -8,6 +8,7 @@
 - [FEATURE] Extend Step for used tools
 - [FEATURE] New Ingredient unit: pinch
 - [FEATURE] nl2br for recipe teaser
+- [FEATURE] Add flexible time for recipe and difficulty
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 

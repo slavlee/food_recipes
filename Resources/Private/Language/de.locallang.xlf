@@ -33,6 +33,18 @@
 			<trans-unit id="misc.jumptox">
 				<target>Springe zu %s</target>
 			</trans-unit>
+			<trans-unit id="misc.difficulty.easy">
+				<target>Einfach</target>
+			</trans-unit>
+			<trans-unit id="misc.difficulty.medium">
+				<target>Mittel</target>
+			</trans-unit>
+			<trans-unit id="misc.difficulty.hard">
+				<target>Schwierig</target>
+			</trans-unit>
+			<trans-unit id="misc.difficulty.very_hard">
+				<target>Sehr schwierig</target>
+			</trans-unit>
 
 			<trans-unit id="recipe.details.prep_time">
 				<target>Vorbereitung</target>
@@ -54,6 +66,9 @@
 			</trans-unit>
 			<trans-unit id="recipe.details.jumptofunc.affiliates">
 				<target>Zu den Produkten</target>
+			</trans-unit>
+			<trans-unit id="recipe.details.difficulty">
+				<target>Schwierigkeit</target>
 			</trans-unit>
 
 			<trans-unit id="recipe.list.filter.categories">

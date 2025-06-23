@@ -40,7 +40,7 @@ class NewsBootstrap extends AbstractBootstrap
         ExtensionManagementUtility::addFieldsToPalette(
             $this->dbTable,
             RecipeRegister::PALETTE_RECIPE,
-            'servings,--linebreak--,prep_time,cook_time,--linebreak--,ingredients,--linebreak--,tools'
+            'servings,--linebreak--,prep_time,cook_time,--linebreak--,wait_time,wait_time_label,--linebreak--,difficulty,--linebreak--,ingredients,--linebreak--,tools'
         );
 
         ExtensionManagementUtility::addFieldsToPalette(
@@ -73,6 +73,8 @@ class NewsBootstrap extends AbstractBootstrap
                         'format' => 'integer',
                         'required' => true,
                     ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
                 ]
             ),
             'prep_time' => $this->getNumberTCADef(
@@ -84,7 +86,12 @@ class NewsBootstrap extends AbstractBootstrap
                     'config' => [
                         'format' => 'decimal',
                         'required' => true,
+                        'behaviour' => [
+                            'allowLanguageSynchronization' => 0,
+                        ],
                     ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
                 ]
             ),
             'cook_time' => $this->getNumberTCADef(
@@ -96,7 +103,76 @@ class NewsBootstrap extends AbstractBootstrap
                     'config' => [
                         'format' => 'decimal',
                         'required' => true,
+                        'behaviour' => [
+                            'allowLanguageSynchronization' => 0,
+                        ],
                     ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
+                ]
+            ),
+            'wait_time' => $this->getNumberTCADef(
+                true,
+                $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.wait_time'),
+                30,
+                [
+                    'description' => $this->getLLL('locallang_tca.xlf:misc.time_in_minutes'),
+                    'config' => [
+                        'format' => 'decimal',
+                        'required' => true,
+                        'behaviour' => [
+                            'allowLanguageSynchronization' => 0,
+                        ],
+                    ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
+                ]
+            ),
+            'wait_time_label' => $this->getSelectTCADef(
+                $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.wait_time.label'),
+                'selectSingle',
+                true,
+                false,
+                [
+                    'config' => [
+                        'items' => [
+                            [
+                                'label' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.wait_time.I.waiting'),
+                                'value' => 'waiting'
+                            ],
+                            [
+                                'label' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.wait_time.I.fermentation'),
+                                'value' => 'fermentation'
+                            ],
+                        ],
+                        'behaviour' => [
+                            'allowLanguageSynchronization' => 0,
+                        ],
+                    ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
+                ]
+            ),
+            'difficulty' => $this->getNumberTCADef(
+                true,
+                $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.difficulty'),
+                30,
+                [
+                    'config' => [
+                        'format' => 'integer',
+                        'required' => false,
+                        'default' => 5,
+                        'range' => [
+                            'lower' => 1,
+                            'upper' => 10
+                        ],
+                        'step' => 1,
+                        'behaviour' => [
+                            'allowLanguageSynchronization' => 0,
+                        ],
+                    ],
+                    'l10n_mode' => 'exclude',
+                    'l10n_display' => 'defaultAsReadonly',
                 ]
             ),
             'ingredients' => $this->getInlineTCADef(
@@ -115,7 +191,6 @@ class NewsBootstrap extends AbstractBootstrap
                     ]
                 ]
             ),
-
             'tools' => $this->getSelectTCADef(
                 $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_recipe.tools'),
                 'selectMultipleSideBySide',

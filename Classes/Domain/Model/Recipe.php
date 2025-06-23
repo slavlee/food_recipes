@@ -19,19 +19,31 @@ class Recipe extends News
      * Summary of prepTime
      * @var float
      */
-    protected $prepTime = 0;
+    protected float $prepTime = 0;
 
     /**
      * Summary of cookTime
      * @var float
      */
-    protected $cookTime = 0;
+    protected float $cookTime = 0;
+
+    /**
+     * Summary of waitTime
+     * @var float
+     */
+    protected float $waitTime = 0;
+
+    /**
+     * Label for wait time
+     * @var string
+     */
+    protected string $waitTimeLabel = '';
 
     /**
      * Summary of servings
      * @var int
      */
-    protected $servings = 0;
+    protected int $servings = 0;
 
     /**
      * Summary of ingredients
@@ -56,6 +68,12 @@ class Recipe extends News
      * @var ObjectStorage<Tool>
      */
     protected ObjectStorage $tools;
+
+    /**
+     * Difficulty of the recipe
+     * @var int
+     */
+    protected int $difficulty = 5;
 
     public function __construct()
     {
@@ -246,5 +264,77 @@ class Recipe extends News
         }
 
         return implode(',', $keywords);
+    }
+
+    /**
+     * Get summary of waitTime
+     *
+     * @return  float
+     */
+    public function getWaitTime()
+    {
+        return $this->waitTime;
+    }
+
+    /**
+     * Set summary of waitTime
+     *
+     * @param  float  $waitTime  Summary of waitTime
+     *
+     * @return  self
+     */
+    public function setWaitTime(float $waitTime)
+    {
+        $this->waitTime = $waitTime;
+
+        return $this;
+    }
+
+    /**
+     * Get label for wait time
+     *
+     * @return  string
+     */
+    public function getWaitTimeLabel()
+    {
+        return $this->waitTimeLabel;
+    }
+
+    /**
+     * Set label for wait time
+     *
+     * @param  string  $waitTimeLabel  Label for wait time
+     *
+     * @return  self
+     */
+    public function setWaitTimeLabel(string $waitTimeLabel): self
+    {
+        $this->waitTimeLabel = $waitTimeLabel;
+
+        return $this;
+    }
+
+    /**
+     * Get difficulty of the recipe
+     *
+     * @return  int
+     */
+    public function getDifficulty(): int
+    {
+        return $this->difficulty;
+    }
+
+    /**
+     * Set difficulty of the recipe
+     *
+     * @param  int  $difficulty  Difficulty of the recipe
+     *
+     * @return  self
+     */
+    public function setDifficulty(int $difficulty): self
+    {
+        $this->difficulty = $difficulty;
+
+        return $this;
     }
 }
