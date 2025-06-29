@@ -1,19 +1,21 @@
 const cookingMode = {
   init: function() {
-    this.toggler = document.querySelector('#cookingModeToggler');
+    this.togglers = document.querySelectorAll('.cookingModeToggler');
 
-    if (!this.toggler) {
-      console.error('Could not find cooking mode toggler with select: #cookingModeToggler');
+    if (!this.togglers) {
+      console.error('Could not find cooking mode togglers with select: .cookingModeToggler');
     }
 
-    this.toggler.addEventListener('click', (event) => {
-      event.preventDefault();
+    this.togglers.forEach((toggler) => {
+      toggler.addEventListener('click', (event) => {
+        event.preventDefault();
 
-      if (!document.querySelector('body').classList.contains('cooking-mode')) {
-        this.start();
-      } else {
-        this.end();
-      }
+        if (!document.querySelector('body').classList.contains('cooking-mode')) {
+          this.start();
+        } else {
+          this.end();
+        }
+      });
     });
 
     this.steps = document.querySelector('.list-recipe-steps');
