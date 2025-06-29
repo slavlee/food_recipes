@@ -34,7 +34,7 @@ class StepBootstrap extends AbstractBootstrap
         $newProperties = [
             'ctrl' => [
                 'title' => $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_ingredient'),
-                'label' => 'number',
+                'label' => 'description',
                 'tstamp' => 'tstamp',
                 'crdate' => 'crdate',
                 'delete' => 'deleted',
@@ -61,17 +61,6 @@ class StepBootstrap extends AbstractBootstrap
                 ],
             ],
             'columns' => [
-                'number' => $this->getNumberTCADef(
-                    true,
-                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.number'),
-                    30,
-                    [
-                        'config' => [
-                            'format' => 'integer',
-                            'required' => true,
-                        ],
-                    ]
-                ),
                 'description' => $this->getRTETCADef(
                     true,
                     $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.description'),

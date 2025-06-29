@@ -119,7 +119,6 @@ class NewsBootstrap extends AbstractBootstrap
                     'description' => $this->getLLL('locallang_tca.xlf:misc.time_in_minutes'),
                     'config' => [
                         'format' => 'decimal',
-                        'required' => true,
                         'behaviour' => [
                             'allowLanguageSynchronization' => 0,
                         ],
@@ -188,6 +187,7 @@ class NewsBootstrap extends AbstractBootstrap
                         'appearance' => [
                             'collapseAll' => true,
                         ],
+                        'foreign_sortby' => 'sorting',
                     ]
                 ]
             ),
@@ -226,6 +226,7 @@ class NewsBootstrap extends AbstractBootstrap
                         'appearance' => [
                             'expandSingle' => true,
                         ],
+                        'foreign_sortby' => 'sorting',
                     ]
                 ]
             ),

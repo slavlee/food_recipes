@@ -11,6 +11,8 @@
 - [FEATURE] Add flexible time for recipe and difficulty
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
+- [CHANGE] Remove Step Number, because we use foreach iterator
+- [CHANGE] Use sorting for recipe ingredients and steps
 
 ## Version 1.1.0
 - [FEATURE] Add Ingredient Calculator
