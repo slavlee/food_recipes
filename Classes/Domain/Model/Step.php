@@ -19,12 +19,6 @@ use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 class Step extends AbstractEntity
 {
     /**
-     * Summary of number
-     * @var int
-     */
-    protected int $number = 0;
-
-    /**
      * Summary of description
      * @var string
      */
@@ -47,36 +41,32 @@ class Step extends AbstractEntity
      */
     protected ObjectStorage $media;
 
+    /**
+     * Name of a group this step belongs to.
+     * This can be used to group steps together in a recipe.
+     * @var string
+     */
+    protected string $group = '';
+
+    /**
+     * Helper property to determine the step number in a recipe with group
+     * @param int
+     */
+    protected int $stepNumber = 0;
+
+    /**
+     * Helper property to determine if we want to show group name in frontend,
+     * when rendering this step
+     * @var bool
+     */
+    protected bool $showGroup = false;
+
     public function __construct()
     {
         $this->ingredients = new ObjectStorage();
         $this->tools = new ObjectStorage();
         $this->media = new ObjectStorage();
     }
-
-	/**
-	 * Get summary of number
-	 *
-	 * @return int
-	 */
-	public function getNumber(): int
-	{
-		return $this->number;
-	}
-
-	/**
-	 * Set summary of number
-	 *
-	 * @param int  $number
-	 *
-	 * @return self
-	 */
-	public function setNumber(int $number): self
-	{
-		$this->number = $number;
-
-		return $this;
-	}
 
 	/**
 	 * Get summary of description
@@ -170,6 +160,74 @@ class Step extends AbstractEntity
     public function setMedia(ObjectStorage $media): self
     {
         $this->media = $media;
+
+        return $this;
+    }
+
+    /**
+     * Get this can be used to group steps together in a recipe.
+     *
+     * @return  string
+     */
+    public function getGroup()
+    {
+        return $this->group;
+    }
+
+    /**
+     * Set this can be used to group steps together in a recipe.
+     *
+     * @param  string  $group  This can be used to group steps together in a recipe.
+     *
+     * @return  self
+     */
+    public function setGroup(string $group)
+    {
+        $this->group = $group;
+
+        return $this;
+    }
+
+    /**
+     * Get when rendering this step
+     *
+     * @return  bool
+     */
+    public function getShowGroup()
+    {
+        return $this->showGroup;
+    }
+
+    /**
+     * Set when rendering this step
+     *
+     * @param  bool  $showGroup  when rendering this step
+     *
+     * @return  self
+     */
+    public function setShowGroup(bool $showGroup)
+    {
+        $this->showGroup = $showGroup;
+
+        return $this;
+    }
+
+    /**
+     * Get helper property to determine the step number in a recipe with group
+     */
+    public function getStepNumber()
+    {
+        return $this->stepNumber;
+    }
+
+    /**
+     * Set helper property to determine the step number in a recipe with group
+     *
+     * @return  self
+     */
+    public function setStepNumber($stepNumber)
+    {
+        $this->stepNumber = $stepNumber;
 
         return $this;
     }

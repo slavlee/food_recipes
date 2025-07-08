@@ -39,7 +39,7 @@ class StepBootstrap extends AbstractBootstrap
                 'crdate' => 'crdate',
                 'delete' => 'deleted',
                 'sortby' => 'sorting',
-                'default_sortby' => 'number',
+                'default_sortby' => 'sorting',
                 'versioningWS' => true,
                 'iconfile' => $this->getIconPath('step.svg'),
                 'languageField' => 'sys_language_uid',
@@ -57,7 +57,7 @@ class StepBootstrap extends AbstractBootstrap
             ],
             'types' => [
                 0 => [
-                    'showitem' => 'number,--linebreak--,description,--linebreak--,ingredients,tools,--linebreak--,media'
+                    'showitem' => 'description,--linebreak--,ingredients,tools,--linebreak--,media,--linebreak--,group'
                 ],
             ],
             'columns' => [
@@ -92,6 +92,10 @@ class StepBootstrap extends AbstractBootstrap
                     $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.media'),
                     0,
                     99
+                ),
+                'group' => $this->getInputTCADef(
+                    true,
+                    $this->getLLL('locallang_db.xlf:tx_foodrecipes_domain_model_step.group'),
                 )
             ]
         ];

@@ -22,9 +22,7 @@ use GeorgRinger\News\Domain\Repository\CategoryRepository;
 use GeorgRinger\News\Domain\Repository\NewsRepository;
 use GeorgRinger\News\Domain\Repository\TagRepository;
 use Psr\Http\Message\ResponseInterface;
-use Slavlee\FoodRecipes\Utility\StruturedDataUtility;
 use TYPO3\CMS\Core\Page\AssetCollector;
-use TYPO3\CMS\Extbase\Http\ForwardResponse;
 
 final class SearchController extends NewsController
 {

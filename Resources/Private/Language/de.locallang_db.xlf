@@ -45,6 +45,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_recipe.affiliates">
 				<target>Zu diesem Rezept passende Affiliate-Links</target>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.group">
+				<target>Gruppe</target>
+			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_ingredient">
 				<target>Zutat</target>

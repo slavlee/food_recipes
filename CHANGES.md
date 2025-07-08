@@ -9,6 +9,7 @@
 - [FEATURE] New Ingredient unit: pinch
 - [FEATURE] nl2br for recipe teaser
 - [FEATURE] Add flexible time for recipe and difficulty
+- [FEATURE] Add option to group recipe steps
 - [CHANGE] Recipe in List is an itemprop Article
 - [CHANGE] Use FlexForm/TypoScript media size settings
 - [CHANGE] Remove Step Number, because we use foreach iterator

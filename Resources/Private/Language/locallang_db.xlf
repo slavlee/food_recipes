@@ -129,6 +129,9 @@
 			<trans-unit id="tx_foodrecipes_domain_model_step.media">
 				<source>Media</source>
 			</trans-unit>
+			<trans-unit id="tx_foodrecipes_domain_model_step.group">
+				<source>Group</source>
+			</trans-unit>
 
 			<trans-unit id="tx_foodrecipes_domain_model_affiliate">
 				<source>Affiliate</source>

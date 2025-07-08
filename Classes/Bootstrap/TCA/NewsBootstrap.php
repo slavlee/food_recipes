@@ -222,7 +222,7 @@ class NewsBootstrap extends AbstractBootstrap
                     'config' => [
                         'minitems' => 0,
                         'maxitems' => 99,
-                        'foreign_default_sortby' => 'number',
+                        'foreign_default_sortby' => 'sorting',
                         'appearance' => [
                             'expandSingle' => true,
                         ],
