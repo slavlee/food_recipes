@@ -45,6 +45,7 @@ class SelectSingleBoxStepIngredients
         $querySettings = $ingredientRepository->createQuery()->getQuerySettings();
         $querySettings->setStoragePageIds($storagePageIds);
         $querySettings->setRespectSysLanguage(false);
+        $querySettings->setEnableFieldsToBeIgnored(['deleted']);
         $ingredientRepository->setDefaultQuerySettings($querySettings);
 
         return $ingredientRepository;

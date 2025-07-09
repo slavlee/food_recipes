@@ -50,6 +50,7 @@ class SelectSingleBoxStepTools
         $querySettings = $repository->createQuery()->getQuerySettings();
         $querySettings->setStoragePageIds($storagePageIds);
         $querySettings->setRespectSysLanguage(false);
+        $querySettings->setEnableFieldsToBeIgnored(['deleted']);
         $repository->setDefaultQuerySettings($querySettings);
 
         return $repository;

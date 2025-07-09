@@ -186,6 +186,7 @@ class NewsBootstrap extends AbstractBootstrap
                         'maxitems' => 99,
                         'appearance' => [
                             'collapseAll' => true,
+                            'useSortable' => true,
                         ],
                         'foreign_sortby' => 'sorting',
                     ]
@@ -222,9 +223,9 @@ class NewsBootstrap extends AbstractBootstrap
                     'config' => [
                         'minitems' => 0,
                         'maxitems' => 99,
-                        'foreign_default_sortby' => 'sorting',
                         'appearance' => [
                             'expandSingle' => true,
+                            'useSortable' => true,
                         ],
                         'foreign_sortby' => 'sorting',
                     ]
